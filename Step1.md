@@ -10,7 +10,7 @@ Please submit a PDF file that includes the following:
 
 2. Provide the selected project title (title of project 1 or 2). This will be your final choice for the rest of the semester, so read both projects carefully. 
 
-project 2
+We have decided to do project 2, the Co-op database system.
 
 3. Describe the selected project more clearly. 
 
