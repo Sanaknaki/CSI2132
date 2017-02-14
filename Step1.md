@@ -10,13 +10,13 @@ Please submit a PDF file that includes the following:
 
 2. Provide the selected project title (title of project 1 or 2). This will be your final choice for the rest of the semester, so read both projects carefully. 
 
-We have decided to do project 2, the Co-op database system.
+  We have decided to do project 2, the Co-op database system.
 
 3. Describe the selected project more clearly. 
 
 4. What are the possible entities, attributes and relations? If you may include specifications or generalization in your design.  
-  - Possible entities:
-  - Possible attributes:
+  - Possible entities:User,Moderator(could be a subclass of User), Company, Jobs, Program,Resume,Upvote
+  - Possible attributes:User(name,email, program , level), Moderator(same as User, with something else which makes it distinct), Company(name, info, number_of_employees ),Jobs(info,level_directed_to,company, ranking),Program
   - Possible reltions:
 
 5. Specify any assumptions that you may add for designing the database and for its use. This is just outlining your thoughts and initial design.  
