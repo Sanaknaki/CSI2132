@@ -18,8 +18,8 @@ The	project	aims	to	develop	a	simple	website	catered	to	co-op	students	looking	t
 reports	like	best	job	posting,	most	frequent	job	category,	and	best	5	companies	with	respect	to	student	evaluation	..	etc.
 
 4. What are the possible entities, attributes and relations? If you may include specifications or generalization in your design.  
-  - Possible entities:User,Moderator(could be a subclass of User,disjoint), Company, Jobs, Program,Resume,Upvote,Program_enrolled, ResumeReview, 
-  - Possible attributes:User(name,email, program , level,password,rating), Moderator(same as User, with something else which makes it distinct), Company(name, info, number_of_employees,rating ),Jobs(info,level_directed_to,company, ranking,Pk(Job_i.d)),Program,Program_enrolled(start_date,graduation,co-op_required,credits_required),Resume(i.d,), ResumeReview, ResumeReviewRequest, Upvote(user_i.d,review_i.d)
+  - Possible entities:User,Student(subclass of User,overlapping),Moderator(subclass of User,overlapping), Company, Jobs, Program,Resume,Upvote,Program_enrolled, ResumeReview, 
+  - Possible attributes:User(i.d(primary key),name,email, program,level,password,rating), Moderator(same as User, number_of_resumes_reviewed) ,Student(same as User, student_i.d) Company(name, info, number_of_employees,rating ),Jobs(info,level_directed_to,company, ranking,Pk(Job_i.d)),Program,Program_enrolled(start_date,graduation,co-op_required,credits_required),Resume(i.d,), ResumeReview, ResumeReviewRequest, Upvote(user_i.d,review_i.d)
   - Possible relations:Interview(Jobs,start_time,date_time),ResumeReviewRequest(resume_i.d,version_i.d)
 
 5. Specify any assumptions that you may add for designing the database and for its use. This is just outlining your thoughts and initial design.  . 
