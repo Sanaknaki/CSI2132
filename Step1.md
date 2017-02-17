@@ -18,9 +18,9 @@ The	project	aims	to	develop	a	simple	website	catered	to	co-op	students	looking	t
 reports	like	best	job	posting,	most	frequent	job	category,	and	best	5	companies	with	respect	to	student	evaluation	..	etc.
 
 4. What are the possible entities, attributes and relations? If you may include specifications or generalization in your design.  
-  - Possible entities:User,Student(subclass of User,overlapping),Moderator(subclass of User,overlapping), Company, Jobs, Program,Resume,Upvote,Program_enrolled, ResumeReview, 
-  - Possible attributes:User(i.d(primary key),name,email, program,level,password,rating), Moderator(same as User, number_of_resumes_reviewed) ,Student(same as User, student_i.d) Company(name, info, number_of_employees,rating ),Jobs(info,level_directed_to,company, ranking,Pk(Job_i.d)),Program,Program_enrolled(start_date,graduation,co-op_required,credits_required),Resume(i.d,), ResumeReview, ResumeReviewRequest, Upvote(user_i.d,review_i.d)
-  - Possible relations:Interview(Jobs,start_time,date_time),ResumeReviewRequest(resume_i.d,version_i.d)
+  - Possible entities:User,Student(subclass of User,overlapping),Moderator(subclass of User,overlapping), Company, Jobs, Program,Resume,Upvote,Program_enrolled, ResumeReview, Grades,Courses,University
+  - Possible attributes:User(i.d(primary key),name,email, program,level,password,rating), Moderator(same as User, number_of_resumes_reviewed) ,Student(same as User, student_i.d,program_i.d) Company(name(primary key), info, number_of_employees,rating ),Jobs(info,level_directed_to,company, ranking,Pk(Job_i.d)),Program_enrolled(program_id,start_date,graduation,co-op_required,credits_required),Resume(resume_i.d(primary key),version_i.d), ResumeReview(resume_i.d,version_i.d),Courses(Course_id(primary key), prof,university_i.d),University(university_i.d(primary key), location),Grades(course_i.d,student_i.d,letter(derived),numerical_grade).
+  - Possible relations:Interview(Jobs,start_time,date_time),ResumeReviewRequest(resume_i.d,version_i.d),Upvote(user_i.d,review_i.d)
 
 5. Specify any assumptions that you may add for designing the database and for its use. This is just outlining your thoughts and initial design.  . 
 
