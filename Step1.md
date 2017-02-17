@@ -13,6 +13,9 @@ Please submit a PDF file that includes the following:
   We have decided to do project 2, the Co-op database system.
 
 3. Describe the selected project more clearly. 
+The selected project is a website that allows co-op students to find placements for Engineering jobs. With the jobs, there will be the ability for users to post reviews for the company or specific jobs. The users can also review 
+The	project	aims	to	develop	a	simple	website	catered	to	co-op	students	looking	to	find	co-op	placements	in	Engineering.	It	will	allow	users	to	post	reviews	and	other	information	regarding	specific	positions,	or	in	general,	at	any	given	company	(think	Glassdoor).	As	with	Glassdoor,	users	can	review	different	aspects	of	each	position,	from	interview	experience,	to	on-the-job	experience,	to	salary.	Users	can	also	upvote	specific	reviews	they	found	useful.	To	help	users	improve	their	resume,	users	can	upload	their	resume	for	moderators	to	review.	We	will	keep	a	versioned	history	of	a	user’s	resume	uploads,	simplifying	the	review	process	by	associating	comments	with	a	particular	version,	and	allowing	users	to	track	the	evolution	of	their	resumes.	The	jobs	provided	in	this	system	should	target	the	student	levels,	as	students	in	lower	level	in	the	program	cannot	compete	with	students	in	higher-level	and	who	has	a	previous	co-op	experience.		A	notification	can	be	sent	to	users	(according	to	their	level)	for	a	new	job	posting.	Also	the	users	can	see	
+reports	like	best	job	posting,	most	frequent	job	category,	and	best	5	companies	with	respect	to	student	evaluation	..	etc.
 
 4. What are the possible entities, attributes and relations? If you may include specifications or generalization in your design.  
   - Possible entities:User,Moderator(could be a subclass of User), Company, Jobs, Program,Resume,Upvote
