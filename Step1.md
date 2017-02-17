@@ -19,8 +19,8 @@ reports	like	best	job	posting,	most	frequent	job	category,	and	best	5	companies	
 
 4. What are the possible entities, attributes and relations? If you may include specifications or generalization in your design.  
   - Possible entities:User,Moderator(could be a subclass of User), Company, Jobs, Program,Resume,Upvote
-  - Possible attributes:User(name,email, program , level), Moderator(same as User, with something else which makes it distinct), Company(name, info, number_of_employees ),Jobs(info,level_directed_to,company, ranking),Program
-  - Possible reltions:
+  - Possible attributes:User(name,email, program , level,password,rating), Moderator(same as User, with something else which makes it distinct), Company(name, info, number_of_employees,rating ),Jobs(info,level_directed_to,company, ranking,Pk(Job_i.d)),Progrram
+  - Possible relations:Interview(Foreign key(Jobs),start_time,date_time)
 
 5. Specify any assumptions that you may add for designing the database and for its use. This is just outlining your thoughts and initial design.  
 
