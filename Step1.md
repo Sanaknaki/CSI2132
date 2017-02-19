@@ -14,8 +14,8 @@ Please submit a PDF file that includes the following:
   We have decided to do project 2, the Co-op database system.
 
 3. Describe the selected project more clearly. 
-
-The selected project is a website that allows co-op students to find placements for Engineering jobs. With the jobs, there will be the ability for users to post reviews for the company or specific jobs.  There would be reports which are available for users to see regarding most frequent job categories, best 5 companies and best job posting. These reports are based off users evaluations. The users can review jobs and companies such as GlassDoor, it also allows the users to review the different aspects that comes with each job, including the interview process to the actual job, they can even include personal experience and are able to write the salary they received as a reference for others. Users are able to upload their personal resume for moderators to review. All the jobs within this system will specify which level of students they require and then when the job is posted,a notification would be sent to all users of that level informing them that a new job has been posted.
+  
+  The selected project is a website that allows co-op students to find placements for Engineering jobs. With the jobs, there will be the ability for users to post reviews for the company or specific jobs.  There would be reports which are available for users to see regarding most frequent job categories, best 5 companies and best job posting. These reports are based off users evaluations. The users can review jobs and companies such as GlassDoor, it also allows the users to review the different aspects that comes with each job, including the interview process to the actual job, they can even include personal experience and are able to write the salary they received as a reference for others. Users are able to upload their personal resume for moderators to review. All the jobs within this system will specify which level of students they require and then when the job is posted,a notification would be sent to all users of that level informing them that a new job has been posted.
 
 4. What are the possible entities, attributes and relations? If you may include specifications or generalization in your design.  
 
@@ -27,7 +27,7 @@ The selected project is a website that allows co-op students to find placements 
 
 5. Specify any assumptions that you may add for designing the database and for its use. This is just outlining your thoughts and initial design.  
 
-This system will be used for different universities.
+  This system will be used for different universities.
 
 6. Provide the initial list of possible SQL DML that a user can use to manipulate the data in your system (work for the bonus from now!). 
 
