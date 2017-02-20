@@ -19,7 +19,7 @@ The	project	aims	to	develop	a	simple	website	catered	to	co-op	students	looking	t
 reports	like	best	job	posting,	most	frequent	job	category,	and	best	5	companies	with	respect	to	student	evaluation	..	etc.
 
 4. What are the possible entities, attributes and relations? If you may include specifications or generalization in your design.  
-    - Possible entities:
+    - **Possible entities:**
     User
     Student(subclass of User,overlapping)
     Moderator(subclass of User,overlapping)
@@ -33,7 +33,7 @@ reports	like	best	job	posting,	most	frequent	job	category,	and	best	5	companies	
     Grades
     Courses 
     University
-    - Possible attributes:
+    - **Possible entities:**
     User(id(Primary Key),name,email,program,level,password,rating)
     Moderator(same as User, number_of_resumes_reviewed)
     Student(same as User, student_id,program_id) 
@@ -45,7 +45,7 @@ reports	like	best	job	posting,	most	frequent	job	category,	and	best	5	companies	
     Courses(Course_id(primary key), prof,university_id)
     University(university_id(primary key), location)
     Grades(course_id,student_id,letter(derived),numerical_grade).
-    - Possible relations:
+    - **Possible entities:**
     Interview(Jobs,start_time,date_time)
     ResumeReviewRequest(resume_id,version_id)
     Apply(user_id, job_id)
