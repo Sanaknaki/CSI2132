@@ -1,10 +1,3 @@
--- Select 
-SELECT 
-INSERT
-DELETE
-UPDATE
-
-
 -- Student applied to a job
 INSERT INTO jobs_applied (student_id, Job_id)
 VALUES ( :student_id, :job_id)
