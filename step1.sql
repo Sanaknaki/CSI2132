@@ -50,8 +50,8 @@ INSERT INTO interview (start_time, end_time, location, student_id, job_id)
 VALUES (:start_time, :end_time, :location, :student_id, :job_id)
 
 -- add jobs
-INSERT INTO Moderator (first_name, last_name, user_id)
-VALUES (:fname, :lname, :user_id)
+INSERT INTO jobs (job_description, level_directed_to, ranking, company_name)
+VALUES (:job_description, :level_directed_to, :ranking, :company_name)
 
 -- add company
 INSERT INTO Moderator (first_name, last_name, user_id)
