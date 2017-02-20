@@ -134,3 +134,34 @@ DELETE FROM courses
 DELETE FROM jobs_applied
  WHERE student_id = :student_id
    AND job_id = :job_id
+
+-- ======================
+-- UPDATE STATEMENTS
+-- ======================
+-- update username
+UPDATE user
+   SET username = :new_username
+ WHERE username = :old_username
+-- update password
+UPDATE user
+   SET password = :password
+ WHERE username = :username
+-- update email
+UPDATE user
+   SET email = :email
+ WHERE username = :username
+-- update interview start
+UPDATE interview
+   SET start = :start
+ WHERE interview_id = :interview_id
+-- update interview end
+UPDATE interview
+   SET end = :end
+ WHERE interview_id = :interview_id
+-- update interview location
+UPDATE interview
+   SET location = :location
+ WHERE interview_id = :interview_id
+-- ======================
+-- SELECT STATEMENTS
+-- ======================
