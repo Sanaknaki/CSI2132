@@ -5,10 +5,10 @@
 Please submit a PDF file that includes the following:
 
 1. group name, team members (names, ID,  and lab number of each member (e.g., B01) )
- **Kritika Wadhera**, 8234314,B02
- **Abdulwahaab Ahmed**, 8260269,B02
- **Ali Sanaknaki**,  7745880, B02
- **Karim Chukfeh**, 6694525, B02
+ -**Kritika Wadhera**, 8234314,B02
+ -**Abdulwahaab Ahmed**, 8260269,B02
+ -**Ali Sanaknaki**,  7745880, B02
+ -**Karim Chukfeh**, 6694525, B02
 
 2. Provide the selected project title (title of project 1 or 2). This will be your final choice for the rest of the semester, so read both projects carefully. 
     We have decided to do project 2, the Co-op database system.
