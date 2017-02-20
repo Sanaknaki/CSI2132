@@ -33,7 +33,7 @@ reports	like	best	job	posting,	most	frequent	job	category,	and	best	5	companies	
     Grades
     Courses 
     University
-    - **Possible entities:**
+    - **Possible attributes:**
     User(id(Primary Key),name,email,program,level,password,rating)
     Moderator(same as User, number_of_resumes_reviewed)
     Student(same as User, student_id,program_id) 
@@ -45,7 +45,7 @@ reports	like	best	job	posting,	most	frequent	job	category,	and	best	5	companies	
     Courses(Course_id(primary key), prof,university_id)
     University(university_id(primary key), location)
     Grades(course_id,student_id,letter(derived),numerical_grade).
-    - **Possible entities:**
+    - **Possible relations:**
     Interview(Jobs,start_time,date_time)
     ResumeReviewRequest(resume_id,version_id)
     Apply(user_id, job_id)
