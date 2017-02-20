@@ -1,8 +1,9 @@
--- Select 
 SELECT 
-DELETE
 UPDATE
 
+-- ======================
+-- INSERT STATEMENTS
+-- ======================
 
 -- Student applied to a job
 INSERT INTO jobs_applied (student_id, Job_id)
@@ -68,6 +69,9 @@ VALUES (:course_name, :course_description)
 INSERT INTO jobs_applied (student_id, job_id)
 VALUES (:student_id, :job_id)
 
+-- ======================
+-- DELETE STATEMENTS
+-- ======================
 
 -- Delete a student
 DELETE FROM student
