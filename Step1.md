@@ -4,14 +4,14 @@
 Please submit a PDF file that includes the following:
 
 1. group name, team members (names, ID,  and lab number of each member (e.g., B01) )
-  - **Kritika Wadhera**, 8234314,B02
-  - **Abdulwahaab Ahmed**, 8260269,B02
-  - **Ali Sanaknaki**,  7745880, B02
-  - **Karim Chukfeh**, 6694525, B02
+- **Kritika Wadhera**, 8234314,B02
+- **Abdulwahaab Ahmed**, 8260269,B02
+- **Ali Sanaknaki**,  7745880, B02
+- **Karim Chukfeh**, 6694525, B02
 
 2. Provide the selected project title (title of project 1 or 2). This will be your final choice for the rest of the semester, so read both projects carefully. 
 
-  We have decided to do project 2, the Co-op database system.
+We have decided to do project 2, the Co-op database system.
 
 3. Describe the selected project more clearly. 
 The selected project is a website that allows co-op students to find placements for Engineering jobs. With the jobs, there will be the ability for users to post reviews for the company or specific jobs. The users can also review 
@@ -19,37 +19,37 @@ The	project	aims	to	develop	a	simple	website	catered	to	co-op	students	looking	t
 reports	like	best	job	posting,	most	frequent	job	category,	and	best	5	companies	with	respect	to	student	evaluation	..	etc.
 
 4. What are the possible entities, attributes and relations? If you may include specifications or generalization in your design.  
-  - Possible entities:
-        User
-        Student(subclass of User,overlapping)
-        Moderator(subclass of User,overlapping)
-        Company
-        Jobs
-        Program
-        Resume
-        Upvote
-        Program_enrolled
-        ResumeReview
-        Grades
-        Courses 
-        University
-  - Possible attributes:
-        User(id(Primary Key),name,email,program,level,password,rating)
-        Moderator(same as User, number_of_resumes_reviewed)
-        Student(same as User, student_id,program_id) 
-        Company(name(primary key), info, number_of_employees,rating)
-        Jobs(info,level_directed_to,company, ranking,Pk(Job_id))
-        Program_enrolled(program_id,start_date,graduation,coop_required,credits_required)
-        Resume(resume_id(primary key),version_id)
-        ResumeReview(resume_id,version_id)
-        Courses(Course_id(primary key), prof,university_id)
-        University(university_id(primary key), location)
-        Grades(course_id,student_id,letter(derived),numerical_grade).
-  - Possible relations:
-        Interview(Jobs,start_time,date_time)
-        ResumeReviewRequest(resume_id,version_id)
-        Apply(user_id, job_id)
-        Upvote(user_id,review_id)
+- Possible entities:
+User
+Student(subclass of User,overlapping)
+Moderator(subclass of User,overlapping)
+Company
+Jobs
+Program
+Resume
+Upvote
+Program_enrolled
+ResumeReview
+Grades
+Courses 
+University
+- Possible attributes:
+User(id(Primary Key),name,email,program,level,password,rating)
+Moderator(same as User, number_of_resumes_reviewed)
+Student(same as User, student_id,program_id) 
+Company(name(primary key), info, number_of_employees,rating)
+Jobs(info,level_directed_to,company, ranking,Pk(Job_id))
+Program_enrolled(program_id,start_date,graduation,coop_required,credits_required)
+Resume(resume_id(primary key),version_id)
+ResumeReview(resume_id,version_id)
+Courses(Course_id(primary key), prof,university_id)
+University(university_id(primary key), location)
+Grades(course_id,student_id,letter(derived),numerical_grade).
+- Possible relations:
+Interview(Jobs,start_time,date_time)
+ResumeReviewRequest(resume_id,version_id)
+Apply(user_id, job_id)
+Upvote(user_id,review_id)
 
 5. Specify any assumptions that you may add for designing the database and for its use. This is just outlining your thoughts and initial design.  
 This system will be used for different universities.
