@@ -58,8 +58,8 @@ INSERT INTO company (company_name, info, number_of_employees, rating)
 VALUES (:company_name, :info, :number_of_employees, :rating)
 
 -- add grades
-INSERT INTO Moderator (first_name, last_name, user_id)
-VALUES (:fname, :lname, :user_id)
+INSERT INTO grades (prof, university_id, student_id, letter, numerical_grade, course_id)
+VALUES (:prof, :university_id, :student_id, :letter, :numerical_grade, :course_id)
 
 -- add courses
 INSERT INTO Moderator (first_name, last_name, user_id)
