@@ -54,8 +54,8 @@ INSERT INTO jobs (job_description, level_directed_to, ranking, company_name)
 VALUES (:job_description, :level_directed_to, :ranking, :company_name)
 
 -- add company
-INSERT INTO Moderator (first_name, last_name, user_id)
-VALUES (:fname, :lname, :user_id)
+INSERT INTO company (company_name, info, number_of_employees, rating)
+VALUES (:company_name, :info, :number_of_employees, :rating)
 
 -- add grades
 INSERT INTO Moderator (first_name, last_name, user_id)
