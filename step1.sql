@@ -66,6 +66,6 @@ INSERT INTO courses (course_name, course_description)
 VALUES (:course_name, :course_description)
 
 -- jobs_applied
-INSERT INTO Moderator (first_name, last_name, user_id)
-VALUES (:fname, :lname, :user_id)
+INSERT INTO jobs_applied (student_id, job_id)
+VALUES (:student_id, :job_id)
 
