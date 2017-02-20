@@ -9,7 +9,7 @@ Please submit a PDF file that includes the following:
     
     **Abdulwahaab Ahmed**, 8260269,B02
     
-,    **Ali Sanaknaki**,  7745880, B02
+    **Ali Sanaknaki**,  7745880, B02
     
     **Karim Chukfeh**, 6694525, B02
 
