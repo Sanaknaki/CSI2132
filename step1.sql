@@ -162,6 +162,52 @@ UPDATE interview
 UPDATE interview
    SET location = :location
  WHERE interview_id = :interview_id
+
 -- ======================
 -- SELECT STATEMENTS
 -- ======================
+-- select student_info
+SELECT *
+  FROM student AS S
+  JOIN program_enrolled AS PE
+    ON S.student_id = PE.student_id
+  JOIN program AS P
+    ON P.program_id = PE.program_id
+ WHERE S.student_id = :student_id
+
+-- select students grade
+SELECT G.numerical_grade, G.letter, C.course_name
+  FROM student AS S
+  JOIN grades AS G
+    ON G.student_id = S.student_id
+  JOIN courses AS C
+    ON C.course_id AS G.course_id
+ WHERE S.student_id = :student_id
+
+-- select job applied
+SELECT J.*
+  FROM jobs_applied AS A
+  JOIN jobs AS J
+    ON J.job_id = A.job_id
+  JOIN student AS S
+    ON S.student_id = A.student_id
+ WHERE S.student_id = :student_id
+
+-- select interviews
+SELECT I.start_time, I.end_time, I.location
+  FROM interview AS I
+  JOIN jobs AS J
+    ON J.job_id = I.job_id
+  JOIN student AS S
+    ON S.student_id = I.student_id
+  JOIN company AS C
+    ON C.company_name = I.company_name
+-- select jobs
+SELECT J.job_description, C.company_name
+  FROM jobs AS J
+  JOIN company AS C
+    ON company_name = company_name
+
+-- select companies
+SELECT company_name
+  FROM company
