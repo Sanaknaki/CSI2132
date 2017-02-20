@@ -1,3 +1,9 @@
+-- Select 
+SELECT 
+DELETE
+UPDATE
+
+
 -- Student applied to a job
 INSERT INTO jobs_applied (student_id, Job_id)
 VALUES ( :student_id, :job_id)
@@ -62,3 +68,65 @@ VALUES (:course_name, :course_description)
 INSERT INTO jobs_applied (student_id, job_id)
 VALUES (:student_id, :job_id)
 
+
+-- Delete a student
+DELETE FROM student
+ WHERE student_id = :student
+
+-- Delete a user
+DELETE FROM user
+ WHERE user_id = :user_id
+
+-- Delete a Moderator
+DELETE FROM Moderator
+ WHERE Moderator_id = :Moderator_id
+-- Delete program
+DELETE FROM program
+ WHERE program_id = :program_id
+
+-- Delete university
+DELETE FROM university
+ WHERE university_id = :university_id
+
+-- Delete program enrolled
+DELETE FROM program_enrolled
+ WHERE student_id = :student_id
+   AND level = :level
+
+-- Delete upvote
+DELETE FROM upvote
+ WHERE Moderator_id = :Moderator_id
+   AND User_id = :User_id
+
+-- Delete resume
+DELETE FROM resume
+ WHERE resume_id = :resume_id
+
+-- Delete resumeReview
+DELETE FROM resumeReview
+ WHERE review_id = :review_id
+
+-- Delete interview
+DELETE FROM interview
+ WHERE interview_id = :interview_id
+
+-- Delete jobs
+DELETE FROM jobs
+ WHERE job_id = :job_id
+
+-- Delete company
+DELETE FROM company
+ WHERE company_name = :company_name
+
+-- Delete grades
+DELETE FROM grades
+ WHERE student_id = :student_id
+   AND course_id = :course_id
+-- Delete courses
+DELETE FROM courses
+ WHERE course_id = :course_id
+
+-- jobs_applied
+DELETE FROM jobs_applied
+ WHERE student_id = :student_id
+   AND job_id = :job_id
