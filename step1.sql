@@ -42,8 +42,8 @@ INSERT INTO resume (resume, version_id, student_id)
 VALUES (:resume, :v_id, :s_id)
 
 -- add resumeReview
-INSERT INTO Moderator (first_name, last_name, user_id)
-VALUES (:fname, :lname, :user_id)
+INSERT INTO resumeReview (resume_id, Moderator_id, comments)
+VALUES (:resume_id, :Moderator_id, :comments)
 
 -- add interview
 INSERT INTO Moderator (first_name, last_name, user_id)
