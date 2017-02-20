@@ -30,12 +30,12 @@ INSERT INTO University (first_name, last_name, user_id)
 VALUES (:fname, :lname, :user_id)
 
 -- add program enrolled
-INSERT INTO Moderator (first_name, last_name, user_id)
-VALUES (:fname, :lname, :user_id)
+INSERT INTO program_enrolled (start_date, graduation, level, coop_required, coop_offered, credits_required, student_id, program_id)
+VALUES (:start_date, :graduation, :level, :coop_required, :coop_offered, :credits_required, :student_id, :program_id)
 
 -- add upvote
-INSERT INTO Moderator (first_name, last_name, user_id)
-VALUES (:fname, :lname, :user_id)
+INSERT INTO upvote (Moderator_id, resume_id)
+VALUES (:Moderator_id, :resume_id)
 
 -- add resume
 INSERT INTO Moderator (first_name, last_name, user_id)
