@@ -38,8 +38,8 @@ INSERT INTO upvote (Moderator_id, resume_id)
 VALUES (:Moderator_id, :resume_id)
 
 -- add resume
-INSERT INTO Moderator (first_name, last_name, user_id)
-VALUES (:fname, :lname, :user_id)
+INSERT INTO resume (resume, version_id, student_id)
+VALUES (:resume, :v_id, :s_id)
 
 -- add resumeReview
 INSERT INTO Moderator (first_name, last_name, user_id)
