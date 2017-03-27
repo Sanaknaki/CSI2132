@@ -13,3 +13,80 @@
  *= require_tree .
  *= require_self
  */
+
+ body
+ {
+   font-family: 'Quicksand', sans-serif !important;
+ }
+
+ a, a:link, a:visited, a:active, a:hover { text-decoration : none !important; color : black;}
+
+ .break{ background-color: dimgrey !important; border: solid 1px dimgrey !important; }
+
+ .header-section
+ {
+   height: 100%;
+   width: 100%;
+   padding: 50px 0;
+   display: table;
+   color: #000000;
+
+   background: #00c6ff; /* fallback for old browsers */
+   background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to left, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   /*background-image: url('../img/bg.jpg');
+   background-repeat:no-repeat;
+   background-size:cover;*/
+ }
+
+ .feed-section
+ {
+   height: 100%;
+   width: 100%;
+   padding: 50px 0;
+   display: table;
+   color: #000000;
+   background-color : #FAFAFA;
+ }
+
+ .about-section
+ {
+   height: 20%;
+   width: 100%;
+   padding: 5px 0;
+   display: table;
+   color: white;
+   background-color : #FFFFFF;
+ }
+
+ .font
+ {
+   font-family: 'Quicksand', sans-serif;
+ }
+
+ .wrapper
+ {
+   padding: 50px;
+   vertical-align: middle;
+   height: 100%;
+   display: table-cell;`
+ }
+
+ .header-container
+ {
+   text-align: center;
+ }
+
+ .greetings
+ {
+   margin: 0 auto;
+   max-width: 1000px;
+ }
+
+ /* Button Modifications */
+ .btn { padding: 14px 24px; border: 0 none; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+ .btn:focus, .btn:active:focus, .btn.active:focus { outline: 0 none; }
+ .btn-primary { background: none !important; border-width : 2px !important; border-color : white !important; color: #ffffff; }
+ .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary
+ { background: none; border-width : 2px !important; border-color : white !important; }
