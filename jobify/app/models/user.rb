@@ -4,4 +4,5 @@ class User < ApplicationRecord
                        :confirmation => true,
                        :length => {:within => 6..40},
                        :on => :create
+  validates_uniqueness_of :email
 end
