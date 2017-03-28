@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 
+  graduation: 
+  level: 1
+  coop_required: false
+  coop_offered: false
+  credits_required: 1
+
+two:
+  start_date: 
+  graduation: 
+  level: 1
+  coop_required: false
+  coop_offered: false
+  credits_required: 1

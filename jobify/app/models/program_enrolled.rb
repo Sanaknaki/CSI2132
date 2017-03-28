@@ -1,0 +1,2 @@
+class ProgramEnrolled < ApplicationRecord
+end
