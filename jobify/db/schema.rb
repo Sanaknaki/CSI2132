@@ -10,13 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327184910) do
+ActiveRecord::Schema.define(version: 20170328003218) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
     t.string   "sector"
     t.string   "rating"
     t.string   "website"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "interviews", force: :cascade do |t|
+    t.string   "start_time"
+    t.string   "timestamps"
+    t.string   "end_time"
+    t.string   "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string   "job_description"
+    t.string   "text"
+    t.string   "level_direct_to"
+    t.string   "integer"
+    t.string   "ranking"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "moderators", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "resumes", force: :cascade do |t|
+    t.string   "resume"
+    t.string   "binary"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
