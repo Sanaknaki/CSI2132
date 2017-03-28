@@ -1,5 +1,7 @@
 # app/controllers/sessions_controller.rb
 class UsersController < ApplicationController
+  # TODO
+  # Send email verification
   def new
     @user = User.new
   end
