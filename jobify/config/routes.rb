@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/', to: 'pages#home'
   get '/main' => 'pages#main'
   get '/tos' => 'pages#tos'
+  get '/about' => 'pages#about'
   # Sessions
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
