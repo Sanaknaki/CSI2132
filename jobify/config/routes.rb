@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
   # Company
   get '/companies' => 'companies#index'
+  get '/companies/:id' => 'companies#fetch_company', :as => :company
 end
