@@ -1,5 +1,5 @@
 <ul>
-<% @companies.each do |comapny| %>
-  <li><%= company %></li>
+<% @companies.each do |company| %>
+  <li>Name: <%= link_to company.name, company %></li>
 <% end %>
 </ul>
