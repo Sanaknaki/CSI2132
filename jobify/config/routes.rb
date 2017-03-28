@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # Pages
   get '/', to: 'pages#home'
-  get '/about' => 'pages#about'
-  get '/tos' => 'pages#tos'
   get '/main' => 'pages#main'
+  get '/tos' => 'pages#tos'
+  get '/about' => 'pages#about'
   # Sessions
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
@@ -11,4 +12,6 @@ Rails.application.routes.draw do
   # Users
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
+  # Company
+  get '/companies' => 'companies#index'
 end
