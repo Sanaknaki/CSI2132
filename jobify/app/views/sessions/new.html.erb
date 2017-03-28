@@ -1,5 +1,4 @@
 <!-- app/views/sessions/new.html.erb -->
-<!DOCTYPE html>
 <html>
 <head>
   <title>Jobify | Login / Signup</title>
@@ -16,6 +15,15 @@
 </head>
 
 <body>
+<%= form_tag '/login' do %>
+  <%#
+  <% if @user.errors.any? ##>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %#>
+        <li><%= message %#></li>
+      <% end %#>
+    </ul>
+  <% end %>
 
   <div class = "header-section">
     <div class = "wrapper">

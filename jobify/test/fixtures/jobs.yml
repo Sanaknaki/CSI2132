@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job_description: MyText
+  level_direct_to: 1
+  ranking: 1
+
+two:
+  job_description: MyText
+  level_direct_to: 1
+  ranking: 1

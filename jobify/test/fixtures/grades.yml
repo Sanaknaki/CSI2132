@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prof: MyString
+  letter: MyString
+  numerical_grade: 9.99
+
+two:
+  prof: MyString
+  letter: MyString
+  numerical_grade: 9.99
