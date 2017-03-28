@@ -1,11 +1,98 @@
 <!-- app/views/sessions/new.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jobify | Login / Signup</title>
+  <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+  <meta name = "viewport" content = "initial-scale = 1, maximum-scale = 1, user-scalable = no">
+  <%= csrf_meta_tags %>
+  <link id = "favicon" rel = "shortcut icon" href = ".../app/assets/images/icon.png" type = "image/png">
+  <!--<link rel = "stylesheet" href = ".../app/assets/stylesheets/application.css"> -->
+  <%= stylesheet_link_tag "application", media: "all" %>
+  <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel = 'stylesheet' href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-<h1>Login</h1>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+</head>
 
-<%= form_tag '/login' do %>
+<body>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
+  <div class = "header-section">
+    <div class = "wrapper">
+      <div class = "row">
+        <div class = "header-container">
 
-<% end %>
+          <div class = "col-md-12">
+            <img src = "logo.png" draggable = "false">
+          </div>
+
+          <div class = "col-md-6">
+            <br>
+            <h1 style = "color : white;">Log In</h1>
+            <br>
+            <%= form_tag '/login' do %>
+              <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input type="text" name = "email" id = "email" class="form-control" placeholder="Email" aria-describedby="sizing-addon3">
+              </div>
+
+              <br>
+
+              <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon4"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                <input type="password" name = "password" id = "password" class = "form-control" placeholder = "Password" aria-describedby = "sizing-addon4">
+              </div>
+
+              <br>
+
+              <input class = "btn btn-primary" type="submit" name="commit" value="Log In" data-disable-with="Submit" />
+            <% end %>
+          </div>
+
+          <div class = "col-md-6">
+            <br>
+            <h1 style = "color : white;">Sign Up</h1>
+            <br>
+
+            <%= form_for :user, url: '/users' do |f| %>
+
+              <div class = "input-group input-group-sm">
+                <span class = "input-group-addon" id = "sizing-addon5"><i class = "fa fa-user" aria-hidden = "true"></i></span>
+                <input type = "text" name = "user[name]" id = "user_name" class = "form-control" placeholder = "Name" aria-describedby = "sizing-addon5">
+              </div>
+
+              <br>
+
+              <div class = "input-group input-group-sm">
+                <span class = "input-group-addon" id = "sizing-addon6"><i class = "fa fa-user" aria-hidden = "true"></i></span>
+                <input type = "text" name = "user[email]" id = "user_email" class = "form-control" placeholder = "Email" aria-describedby = "sizing-addon6">
+              </div>
+
+              <br>
+
+              <div class = "input-group input-group-sm">
+                <span class = "input-group-addon" id = "sizing-addon7"><i class = "fa fa-lock" aria-hidden = "true"></i></span>
+                <input type = "password" name = "user[password]" id = "user_password" class = "form-control" placeholder = "Password" aria-describedby = "sizing-addon7">
+              </div>
+
+              <br>
+
+              <div class = "input-group input-group-sm">
+                <span class = "input-group-addon" id = "sizing-addon8"><i class = "fa fa-unlock-alt" aria-hidden = "true"></i></span>
+                <input type = "password" name = "user[password_confirmation]" id = "user_password_confirmation" class = "form-control" placeholder = "Confirm Password" aria-describedby = "sizing-addon8">
+              </div>
+
+              <br>
+
+              <input class = "btn btn-primary" type = "submit" name = "commit" value = "Sign Up" data-disable-with = "Submit" />
+            <% end %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
