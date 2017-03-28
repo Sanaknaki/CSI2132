@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   # Users
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
+  # Company
+  get '/companies' => 'companies#index'
 end
