@@ -33,7 +33,7 @@ for i in range(len(json.loads(str(soup))["response"]["employers"])):
         company_id = str(i+1)
         cur.execute("INSERT INTO companies VALUES("   +"'"+company_id+"',"   +"'"+name+"',"   +"'"+sector+"',"    +"'"+rating+"',"    +"'"+website+"',"    +"'"+created_at+"',"    +"'"+updated_at+"'"        +")")
     except:
-        print "----------no-go-----------"
+        print "----^-----insertion-is-no-go----^-----"
 
 try:
     conn.commit()
@@ -41,7 +41,7 @@ except:
     print "committment issues"
 
     
-
+'''
 #Retail
 url = "http://api.glassdoor.com/api/api.htm?t.p=133980&t.k=kjtpIxrAhTc&userip=8.28.178.133&useragent=Mozilla&format=json&v=1&action=employers&q=retail"
 hdr = {'User-Agent': 'Mozilla/5.0'}
@@ -61,7 +61,7 @@ for i in range(len(json.loads(str(soup))["response"]["employers"])):
         company_id = str(i+1)
         cur.execute("INSERT INTO companies VALUES("   +"'"+company_id+"',"   +"'"+name+"',"   +"'"+sector+"',"    +"'"+rating+"',"    +"'"+website+"',"    +"'"+created_at+"',"    +"'"+updated_at+"'"        +")")
     except:
-        print "----------no-go-----------"
+        print "----^-----insertion-is-no-go----^-----"
 
 try:
     conn.commit()
@@ -89,9 +89,10 @@ for i in range(len(json.loads(str(soup))["response"]["employers"])):
         company_id = str(i+1)
         cur.execute("INSERT INTO companies VALUES("   +"'"+company_id+"',"   +"'"+name+"',"   +"'"+sector+"',"    +"'"+rating+"',"    +"'"+website+"',"    +"'"+created_at+"',"    +"'"+updated_at+"'"        +")")
     except:
-        print "----------no-go-----------"
+        print "----^-----insertion-is-no-go----^-----"
 
 try:
     conn.commit()
 except:
     print "committment issues"
+'''
