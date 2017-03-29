@@ -9,20 +9,20 @@
   <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel = 'stylesheet' href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+  <link href = "https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel = "stylesheet">
 </head>
 
 <body>
 
-  <nav class="navbar transparent navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand"><img draggable = "false" height = "33" width = "80" src = "logo.png"></a>
+  <nav class = "navbar transparent navbar-fixed-top">
+    <div class = "container">
+      <div class = "navbar-header">
+        <a class = "navbar-brand"><img draggable = "false" height = "33" width = "80" src = "/logo.png"></a>
       </div>
     </div>
   </nav>
 
-  <div class = "login-section">
+  <div class = "full-screen-section login">
     <div class = "wrapper">
       <div class = "row">
         <div class = "header-container">
@@ -47,7 +47,7 @@
     </div>
   </div>
 
-  <div id = "signup" class = "action-section">
+  <div id = "signup" class = "half-screen-section">
     <div class = "wrapper">
       <div class = "row">
         <div class = "header-container">
@@ -70,6 +70,8 @@
               <input type = "password" name = "user[password]" id = "user_password" class = "form-control black-input" placeholder = "Password" />
               <br>
               <input type = "password" name = "user[password_confirmation]" id = "user_password_confirmation" class = "form-control black-input" placeholder = "Confirm Password" />
+              <br>
+
               <br><br>
               <input class = "btn btn-black" type = "submit" name = "commit" value = "Sign Up" data-disable-with = "Submit" />
             <% end %>

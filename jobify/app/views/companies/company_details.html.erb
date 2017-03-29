@@ -1,8 +1,102 @@
-<ul>
-  <li><%= @company.name %></li>
-  <li><%= @company.sector %></li>
-  <li><%= @company.rating %></li>
-  <li><%= @company.website %></li>
+<html>
 
-</ul>
+<head>
+  <title>Jobify | <%= @company.name %></title>
+  <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+  <meta name = "viewport" content = "initial-scale = 1, maximum-scale = 1, user-scalable = no">
+  <%= csrf_meta_tags %>
+  <link id = "favicon" rel = "shortcut icon" href = ".../app/assets/images/icon.png" type = "image/png">
+  <%= stylesheet_link_tag "application", media: "all" %>
+  <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel = 'stylesheet' href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class = "half-screen-section" style = "background : url('/bg/<%= @company.name %>_bg.png')">
+    <div class = "wrapper">
+      <div class = "header-container">
+          <img draggable = "false" height = "150" width = "150" src = "/icon_w/<%= @company.name %>_icon_w.png">
+          <!--<h1 style = "font-size : 35px; color : black; font-weight : 400; text-transform : uppercase;"><%= @company.name %></h1>
+          <!--<a href = '<%= @company.website %>'><h3 style = " color : white; font-weight : 300;"><%= @company.website %></h3></a>
+          <h1 style = "font-size : 40px; color : white; font-weight : 300; text-transform : uppercase;"><%= @company.rating %></h1>-->
+      </div>
+    </div>
+  </div>
+
+  <div class = "half-screen-section">
+    <div class = "wrapper">
+      <div class = "row">
+        <div class = "col-md-5 col-md-offset-right-1">
+          <div class = "panel panel-default">
+            <div class = "panel-heading text-center">
+              <div class = "col-md-3">
+                <img height = "90px" width = "90px" src = "/icon/<%= @company.name %>_icon.png">
+              </div>
+              <h1><%= @company.rating %></h1>
+              <i class="fa fa-globe" aria-hidden="true"></i> <a href = "<%= @company.website %>">website</a>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading text-center"><h1 style = "text-transform : uppercase;">Jobs</h1></div>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <p class = "text-left"><i class="fa fa-pencil" aria-hidden="true"></i> Job Title Here</p>
+                <p class = "text-right"><i class="fa fa-usd" aria-hidden="true"></i> 10'000</p>
+              </li>
+              <li class="list-group-item">
+                <p class = "text-left"><i class="fa fa-pencil" aria-hidden="true"></i> Job Title Here</p>
+                <p class = "text-right"><i class="fa fa-usd" aria-hidden="true"></i> 35'000</p>
+              </li>
+              <li class="list-group-item">
+                <p class = "text-left"><i class="fa fa-pencil" aria-hidden="true"></i> Job Title Here</p>
+                <p class = "text-right"><i class="fa fa-usd" aria-hidden="true"></i> N/A</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class= "col-md-1"></div>
+
+        <div class = "col-md-6">
+          <div class = "well">
+            Words
+          </div>
+
+          <div class = "well">
+            Words
+          </div>
+
+          <div class = "well">
+            Words
+          </div>
+
+          <div class = "well">
+            Words
+          </div>
+
+          <div class = "well">
+            Words
+          </div>
+
+          <div class = "well">
+            Words
+          </div>
+
+          <div class = "well">
+            Words
+          </div>
+
+          <div class = "well">
+            Words
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>

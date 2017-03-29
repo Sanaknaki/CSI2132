@@ -14,92 +14,37 @@
  *= require_self
  */
 
- body
- {
-   font-family: 'Lato', sans-serif !important;
- }
+/* Font used throughout the website */
+body { font-family: 'Lato', sans-serif !important; }
 
- a, a:link, a:visited, a:active, a:hover { text-decoration : none !important; color : black;}
+/* I don't like any special designs on a tags .. */
+a, a:link, a:visited, a:active, a:hover { text-decoration : none !important; color : black !important;}
 
- .break{ background-color: dimgrey !important; border: solid 1px dimgrey !important; }
+/* <hr/> tag style edits */
+.break{ background-color: dimgrey !important; border: solid 1px dimgrey !important; }
 
- .header-section
- {
-   height: 100%;
-   width: 100%;
-   padding: 50px 0;
-   display: table;
-   color: #000000;
+/* Section Controllers */
+.full-screen-section { height: 100%; width: 100%; padding: 50px 0; display: table; }
+.half-screen-section { width: 100%; display: table; color: black; }
 
-   background: #00c6ff; /* fallback for old browsers */
-   background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to left, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- }
+/* Gradient background for the / page */
+.main { background: #00c6ff; background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); background: linear-gradient(to left, #00c6ff , #0072ff); }
 
- .login-section
- {
-   height: 100%;
-   width: 100%;
-   padding: 50px 0;
-   display: table;
-   color: #000000;
+/* Login screen background image */
+ .login { background: url('/background.jpg'); height : 100% background-attachment : fixed; background-position : center; background-repeat : no-repeat; background-size : cover; }
 
-   /*background: #00c6ff; /* fallback for old browsers */
-   /*background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
-   /*background: linear-gradient(to left, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* Wrapper for the sections */
+ .wrapper { padding: 50px; vertical-align: middle; height: 100%; display: table-cell; }
 
-   background: url('/background.jpg');
-   height : 100%
-   background-attachment : fixed;
- 	background-position : center;
- 	background-repeat : no-repeat;
- 	background-size : cover;
- }
+/* Aligning text in a section */
+ .header-container { text-align : center; }
 
- .feed-section
- {
-   height: 100%;
-   width: 100%;
-   padding: 50px 0;
-   display: table;
-   color: #000000;
-   background-color : #FAFAFA;
- }
+/* ==================== ANY BOOTSTRAP MODIFICATIONS ARE DONE BELOW ==================== */
 
- .action-section
- {
-   width: 100%;
-   padding: 5px 0;
-   display: table;
-   color: black;
- }
 
- .font
- {
-   font-family: 'Quicksand', sans-serif;
- }
-
- .wrapper
- {
-   padding: 50px;
-   vertical-align: middle;
-   height: 100%;
-   display: table-cell;
- }
-
- .header-container
- {
-   text-align: center;
- }
-
- .greetings
- {
-   margin: 0 auto;
-   max-width: 1000px;
- }
-
-/* Navbar Modifications */
-.transparent{
+/* Navbar Modifications : Made the nav transparent with this class */
+.transparent
+{
    border-width: 0px;
    -webkit-box-shadow: 0px 0px;
    box-shadow: 0px 0px;
@@ -109,7 +54,7 @@
    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
 }
 
-/* Input Modifications */
+/* Input Modifications : Made a black and white underlined text inputs */
 .white-input { outline : 0 !important; order-style : solid !important; border-radius : 0 !important; background : none !important; border-width : 0 0 1px 0 !important;
                 border-color : white !important; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; color : white !important;
                 font-size : 15px !important; }
@@ -128,7 +73,7 @@
 .black-input::-moz-placeholder { color: black !important; }
 .black-input:-ms-input-placeholder { color: black !important; }
 
- /* Button Modifications */
+ /* Button Modifications : Styling the bootstrap buttons (white & black) */
  .btn { padding: 14px 24px; border: 0 none; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
  .btn:focus, .btn:active:focus, .btn.active:focus { outline: 0 none; }
 
