@@ -1,7 +1,7 @@
 # app/controllers/sessions_controller.rb
 class SessionsController < ApplicationController
   before_filter :authenticate_user, :except => [:new, :create, :destroy]
-  layout 'index_layout', only: [:new]
+  layout 'index_layout', only: [:new, :create]
   def new
     unless session[:user_id] || (User.find_by_id(session[:user_id]))
       render 'new'
@@ -20,6 +20,7 @@ class SessionsController < ApplicationController
       redirect_to '/'
     else
       # If user's login doesn't work, send them back to the login form.
+      @error = 'Invalid email or password'
       render 'new'
     end
   end
