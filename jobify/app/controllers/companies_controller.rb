@@ -1,5 +1,6 @@
 # company controller
 class CompaniesController < ApplicationController
+  # TODO: Add company logo to db
   def index
     @companies = Company.all
     render('index')
