@@ -1,0 +1,38 @@
+<div id = "signup" class = "action-section">
+  <div class = "wrapper">
+    <div class = "row">
+      <div class = "header-container">
+
+        <div class = "col-md-4 col-md-offset-4">
+
+          <%= form_for :user, url: '/users' do |f| %>
+            <% if @user && @user.errors.any? %>
+              <ul>
+                <% @user.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            <% end %>
+
+            <input type = "text" name = "user[name]" id = "user_name" class = "form-control black-input" placeholder = "Name" />
+            <br>
+            <input type = "text" name = "user[email]" id = "user_email" class = "form-control black-input" placeholder = "Email" />
+            <br>
+            <input type = "password" name = "user[password]" id = "user_password" class = "form-control black-input" placeholder = "Password" />
+            <br>
+            <input type = "password" name = "user[password_confirmation]" id = "user_password_confirmation" class = "form-control black-input" placeholder = "Confirm Password" />
+            <br><br>
+            <input class = "btn btn-black" type = "submit" name = "commit" value = "Sign Up" data-disable-with = "Submit" />
+          <% end %>
+
+        </div>
+
+        <div class = "col-md-12">
+          <br>
+          <div style = "word-spacing : 30px"><a href = "/about">ABOUT</a></font></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

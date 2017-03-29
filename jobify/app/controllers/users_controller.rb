@@ -2,7 +2,9 @@
 class UsersController < ApplicationController
   # TODO
   # Send email verification
+  layout 'index_layout', only: [:new, :create]
   def new
+    render 'sessions/new'
     @user = User.new
   end
 
@@ -12,7 +14,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to '/'
     else
-      render 'new'
+      render 'sessions/new'
     end
   end
 

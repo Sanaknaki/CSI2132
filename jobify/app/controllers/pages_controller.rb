@@ -1,5 +1,6 @@
 # personal website controller
 class PagesController < ApplicationController
+  layout 'index_layout', only: [:home]
   def home
     render('index')
   end
