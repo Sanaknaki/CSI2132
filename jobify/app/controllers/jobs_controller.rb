@@ -1,6 +1,7 @@
 # company controller
 class JobsController < ApplicationController
   # TODO: Add company logo to db
+  # TODO: fetch job for compaines
   def index
     @jobs = Job.all
     render('index')
