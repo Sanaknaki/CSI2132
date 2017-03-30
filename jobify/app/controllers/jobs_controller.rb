@@ -10,4 +10,6 @@ class JobsController < ApplicationController
     @job = Job.find(params[:id])
     render('job_details')
   end
+
+  def companies_jobs; end
 end
