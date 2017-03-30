@@ -2,6 +2,7 @@
 class UsersController < ApplicationController
   # TODO
   # Send email verification
+  # reset password
   layout 'index_layout', only: [:new, :create]
   def new
     render 'sessions/new'
