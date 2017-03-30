@@ -2,40 +2,40 @@
 
 <head>
   <title>Jobify</title>
-  <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
-  <meta name = "viewport" content = "initial-scale = 1, maximum-scale = 1, user-scalable = no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
   <%= csrf_meta_tags %>
-  <link id = "favicon" rel = "shortcut icon" href = ".../app/assets/images/icon.png" type = "image/png">
+  <link id="favicon" rel="shortcut icon" href=".../app/assets/images/icon.png" type="image/png">
   <%= stylesheet_link_tag "application", media: "all" %>
-  <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel = 'stylesheet' href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class = "half-screen-section">
-    <div class = "wrapper header-container">
-      <div class = "row">
-        <div class = "col-md-12">
+  <div class="half-screen-section">
+    <div class="wrapper header-container">
+      <div class="row">
+        <div class="col-md-12">
           <br><br>
         </div>
         <% @companies.each do |company| %>
-          <div class = "col-md-6">
-            <a style = "color : black;" title = "<%= company.name %>" href = '/companies/<%= company.id %>'>
-              <div class="panel panel-default" style = "background : url('/bg/<%= company.name %>_bg.png'); /*background-position : bottom; background-repeat : no-repeat; background-size : 100% 5px;*/">
+          <div class="col-md-6">
+            <a style="color : black;" title="<%= company.name %>" href='/companies/<%= company.id %>'>
+              <div class="panel panel-default" style="background : url('/bg/<%= company.name %>_bg.png'); /*background-position : bottom; background-repeat : no-repeat; background-size : 100% 5px;*/">
                 <div class="panel-body">
-                  <img draggable = "false" height = "50" width = "50" src = "/icon_w/<%= company.name %>_icon_W.png">
-                  <h1 style = "text-transform: uppercase; color : white;"><%= company.name %></h1>
+                  <img draggable="false" height="50" width="50" src="/icon_w/<%= company.name %>_icon_W.png">
+                  <h1 style="text-transform: uppercase; color : white;"><%= company.name %></h1>
                   <!--<h4><%= company.rating %></h4>-->
 
                 </div>
               </div>
             </a>
-            <!--<a href = '/companies/<%= company.id %>'>
-              <div class = "well">
-                <h1 style = "text-transform: uppercase;"><%= company.name %></h1>
+            <!--<a href='/companies/<%= company.id %>'>
+              <div class="well">
+                <h1 style="text-transform: uppercase;"><%= company.name %></h1>
                 <h4><%= company.rating %></h4>
               </div>
             </a>-->
