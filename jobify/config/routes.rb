@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   get '/jobs/:id' => 'jobs#fetch_job_by_id', :as => :job
   # interviews
   # students
+  # job and company
+  get '/companies/:c_id/jobs' => 'jobs#fetch_jobs_for_company'
 end
