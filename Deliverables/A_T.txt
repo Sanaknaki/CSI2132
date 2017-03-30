@@ -1,0 +1,58 @@
+CREATE TRIGGER upvote_increase 
+AFTER UPDATE ON Upvote 
+Update INTO Old.rating=Old.rating+1 
+//When something is upvoted, need to increase the count of upvotes.
+
+CREATE TRIGGER update_resume
+AFTER UPDATE ON Resume
+Update INTO 
+//When updating resume, save both the old and new version
+
+CREATE TRIGGER user_info_update
+AFTER UPDATE ON User
+Update INTO
+//After updating user information, save the changes
+
+CREATE ASSERTION not_null_constraint
+CHECK (Not Null(id FROM User)) 
+//Checks id of user is not null
+
+CREATE ASSERTION new_account
+Check(Unique(i.d From User))
+//When a user creates a account, need to check that the username is unique
+
+CREATE ASSERTION enrolled_program
+Check(EXISTS((program_id from Students) In Program)
+//When student inserts program enrolled, insure that the program exist.
+
+CREATE ASSERTION info_jobs
+Check(Not null(job_id,job_descripition, name from Jobs)) AND (job_id 
+//Check the job information has all been inputted and is valid
+
+CREATE ASSERTION info_user
+Check(NOT NULL(Select * From User))
+//Check the user information has all been inputted and is valid
+
+CREATE ASSERTION new_job
+Check(NOT EXIST(Select * from Jobs))
+//When posting a job, need to make sure that job is not already posted for that company
+
+CREATE ASSERTION new_company
+Check(NOT EXIST(Select * from Company))
+//When adding a company insure that there are no two companies of the exact name
+
+CREATE ASSERTION new_account
+Check(Unique(Select * from User))
+//After insert of user, need to make sure that the user does not already have an account
+
+Select user_id and student_id
+From users as U student as S
+Where U.user_id=S.user_id 
+
+----------------------------------------------------------------
+Select job_description, name
+From Jobs
+
+Select user_id, resume_id
+From students as S, Resume as R
+Where S.student_id=R.student_id
