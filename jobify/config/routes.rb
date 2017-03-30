@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   # job
   get '/jobs' => 'jobs#index'
   get '/jobs/:id' => 'jobs#fetch_job_by_id', :as => :job
+  post '/jobs/:id' => 'jobs#apply_to_job'
   # interviews
   # students
   # job and company
