@@ -1,6 +1,7 @@
 # personal website controller
 class PagesController < ApplicationController
   layout 'index_layout', only: [:home]
+  before_filter :authorize, only: [:main]
   def home
     render('index')
   end
