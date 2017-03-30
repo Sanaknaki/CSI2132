@@ -1,13 +1,13 @@
 <html>
 <head>
   <title>Welcome To Jobify!</title>
-  <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
-  <meta name = "viewport" content = "initial-scale = 1, maximum-scale = 1, user-scalable = no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
   <%= csrf_meta_tags %>
-  <link id = "favicon" rel = "shortcut icon" href = ".../app/assets/images/icon.png" type = "image/png">
+  <link id="favicon" rel="shortcut icon" href=".../app/assets/images/icon.png" type="image/png">
   <%= stylesheet_link_tag "application", media: "all" %>
-  <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel = 'stylesheet' href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 </head>
@@ -17,33 +17,33 @@
   <nav class="navbar transparent navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand"><img draggable = "false" height = "33" width = "80" src = "logo.png"></a>
+        <a class="navbar-brand"><img draggable="false" height="33" width="80" src="/logo.png"></a>
       </div>
     </div>
   </nav>
 
-  <div class = "login-section">
-    <div class = "wrapper">
-      <div class = "row">
-        <div class = "header-container">
-          <div class = "greetings">
+  <div class="full-screen-section login">
+    <div class="wrapper">
+      <div class="row">
+        <div class="header-container">
+          <div class="greetings">
 
-            <!--<h1 style = "font-size : 40px; color : white; font-weight : 300;">It's like <strong>YELP</strong>, but for <strong>JOBS</strong>.</h1>-->
+            <!--<h1 style="font-size : 40px; color : white; font-weight : 300;">It's like <strong>YELP</strong>, but for <strong>JOBS</strong>.</h1>-->
 
-            <div class = "col-md-4 col-md-offset-4">
+            <div class="col-md-4 col-md-offset-4">
               <%= form_tag '/login' do %>
                 <% if @error %>
                   <ul style="list-style: none; background: rgba(0, 0, 0, 0.3); padding: 2vh 0; border-radius: 5px 5px 5px 5px;">
                     <li style="color: #FF6B6B;"><%= @error %></li>
                   </ul>
                 <% end %>
-                <input type="text" name = "email" id = "email" class="form-control white-input" placeholder="Email" />
+                <input type="text" name="email" id="email" class="form-control white-input" placeholder="Email" />
                 <br>
-                <input type="password" name = "password" id = "password" class = "form-control white-input" placeholder = "Password" />
+                <input type="password" name="password" id="password" class="form-control white-input" placeholder="Password" />
                 <br><br>
-                <input class = "btn btn-white" type = "submit" name="commit" value="Log In" data-disable-with="Submit" />
+                <input class="btn btn-white" type="submit" name="commit" value="Log In" data-disable-with="Submit" />
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a style = "color : white;" class = "btn btn-white" href="#signup">Sign Up</a>
+                <a style="color : white;" class="btn btn-white" href="#signup">Sign Up</a>
               <% end %>
             </div>
           </div>
