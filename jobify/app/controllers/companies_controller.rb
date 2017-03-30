@@ -1,5 +1,6 @@
 # company controller
 class CompaniesController < ApplicationController
+  layout "index_layout", only: [:index, :fetch_company]
   # TODO: Add company logo to db
   def index
     @companies = Company.all
