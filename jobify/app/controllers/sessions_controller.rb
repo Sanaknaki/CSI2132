@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     unless session[:user_id] || (User.find_by_id(session[:user_id]))
       render 'new'
     else
-      redirect_to '/'
+      redirect_to '/login'
     end
   end
 
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
       # Save the user id inside the browser cookie. This is how we keep the user
       # logged in when they navigate around our website.
       session[:user_id] = @user.id
-      redirect_to '/main'
+      redirect_to '/'
     else
       # If user's login doesn't work, send them back to the login form.
       @error = 'Invalid email or password'
@@ -27,6 +27,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to '/'
+    redirect_to '/login'
   end
 end
