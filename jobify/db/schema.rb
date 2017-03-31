@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328005414) do
+ActiveRecord::Schema.define(version: 20170331170544) do
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "ctext"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comments_companies", id: false, force: :cascade do |t|
+    t.integer "comment_id", null: false
+    t.integer "company_id", null: false
+    t.index ["comment_id", "company_id"], name: "index_comments_companies_on_comment_id_and_company_id"
+    t.index ["company_id", "comment_id"], name: "index_comments_companies_on_company_id_and_comment_id"
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +32,8 @@ ActiveRecord::Schema.define(version: 20170328005414) do
     t.string   "website"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "ctext_id"
+    t.index ["ctext_id"], name: "index_companies_on_ctext_id"
   end
 
   create_table "courses", force: :cascade do |t|
