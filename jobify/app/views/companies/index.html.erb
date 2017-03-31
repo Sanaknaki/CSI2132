@@ -15,34 +15,124 @@
 
 <body>
 
-  <div class="half-screen-section">
-    <div class="wrapper header-container">
-      <div class="row">
-        <div class="col-md-12">
-          <br><br>
-        </div>
-        <% @companies.each do |company| %>
-          <div class="col-md-6">
-            <a style="color : black;" title="<%= company.name %>" href='/companies/<%= company.id %>'>
-              <div class="panel panel-default" style="background : url('/bg/<%= company.name %>_bg.png'); /*background-position : bottom; background-repeat : no-repeat; background-size : 100% 5px;*/">
-                <div class="panel-body">
-                  <img draggable="false" height="50" width="50" src="/icon_w/<%= company.name %>_icon_W.png">
-                  <h1 style="text-transform: uppercase; color : white;"><%= company.name %></h1>
-                  <!--<h4><%= company.rating %></h4>-->
-
-                </div>
-              </div>
-            </a>
-            <!--<a href='/companies/<%= company.id %>'>
-              <div class="well">
-                <h1 style="text-transform: uppercase;"><%= company.name %></h1>
-                <h4><%= company.rating %></h4>
-              </div>
-            </a>-->
-          </div>
-        <% end %>
+  <nav class="navbar transparent navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href = "/" class="navbar-brand"><img draggable="false" height="33" width="80" src="/logo_B.png"></a>
       </div>
     </div>
-	</div>
+  </nav>
+
+<div class="full-screen-section main wrapper">
+  <div id="exTab3">
+    <ul  class="nav nav-pills">
+  	   <li class="active">
+         <a  href="#1b" data-toggle="tab">All Companies</a>
+  	   </li>
+  			<li><a href="#recently_added" data-toggle="tab">Recently Added</a>
+  			</li>
+  			<li><a href="#top_five" data-toggle="tab">Top 5</a>
+  			</li>
+  		</ul>
+
+  			<div class="tab-content clearfix">
+
+  			  <div class="tab-pane active" id="1b">
+            <div class="half-screen-section">
+              <div class="wrapper header-container">
+                <div class="row">
+                  <% @companies.each do |company| %>
+                    <div class="col-md-4">
+                      <a style="color : black;" title="<%= company.name %>" href='/companies/<%= company.id %>'>
+                        <div class="panel panel-default" style="background : url('/bg/<%= company.name %>_bg.png'); /*background-position : bottom; background-repeat : no-repeat; background-size : 100% 5px;*/">
+                          <div class="panel-body">
+                            <img draggable="false" height="50" width="50" src="/icon_w/<%= company.name %>_icon_W.png">
+                            <h1 style="text-transform: uppercase; color : white;"><%= company.name %></h1>
+                            <!--<h4><%= company.rating %></h4>-->
+
+                          </div>
+                        </div>
+                      </a>
+                      <!--<a href='/companies/<%= company.id %>'>
+                        <div class="well">
+                          <h1 style="text-transform: uppercase;"><%= company.name %></h1>
+                          <h4><%= company.rating %></h4>
+                        </div>
+                      </a>-->
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+  				</div>
+
+  				<div class="tab-pane" id="recently_added">
+            <div class="half-screen-section">
+              <div class="wrapper header-container">
+                <div class="row">
+                  <% if @recently_added_companies %>
+                    <% @recently_added_companies.each do |company| %>
+                      <div class="col-md-4">
+                        <a style="color : black;" title="<%= company.name %>" href='/companies/<%= company.id %>'>
+                          <div class="panel panel-default" style="background : url('/bg/<%= company.name %>_bg.png'); /*background-position : bottom; background-repeat : no-repeat; background-size : 100% 5px;*/">
+                            <div class="panel-body">
+                              <img draggable="false" height="50" width="50" src="/icon_w/<%= company.name %>_icon_W.png">
+                              <h1 style="text-transform: uppercase; color : white;"><%= company.name %></h1>
+                              <!--<h4><%= company.rating %></h4>-->
+
+                            </div>
+                          </div>
+                        </a>
+                        <!--<a href='/companies/<%= company.id %>'>
+                          <div class="well">
+                            <h1 style="text-transform: uppercase;"><%= company.name %></h1>
+                            <h4><%= company.rating %></h4>
+                          </div>
+                        </a>-->
+                      </div>
+                    <% end %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+  				</div>
+
+          <div class="tab-pane" id="top_five">
+            <div class="half-screen-section">
+              <div class="wrapper header-container">
+                <div class="row">
+                  <% if @top_five %>
+                    <% @top_five.each do |company| %>
+                      <div class="col-md-4">
+                        <a style="color : black;" title="<%= company.name %>" href='/companies/<%= company.id %>'>
+                          <div class="panel panel-default" style="background : url('/bg/<%= company.name %>_bg.png'); /*background-position : bottom; background-repeat : no-repeat; background-size : 100% 5px;*/">
+                            <div class="panel-body">
+                              <img draggable="false" height="50" width="50" src="/icon_w/<%= company.name %>_icon_W.png">
+                              <h1 style="text-transform: uppercase; color : white;"><%= company.name %></h1>
+                              <!--<h4><%= company.rating %></h4>-->
+
+                            </div>
+                          </div>
+                        </a>
+                        <!--<a href='/companies/<%= company.id %>'>
+                          <div class="well">
+                            <h1 style="text-transform: uppercase;"><%= company.name %></h1>
+                            <h4><%= company.rating %></h4>
+                          </div>
+                        </a>-->
+                      </div>
+                    <% end %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+  				</div>
+  			</div>
+    </div>
+</div>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </html>

@@ -28,7 +28,7 @@ a, a:link, a:visited, a:active, a:hover { text-decoration : none !important; col
 .half-screen-section { width: 100%; display: table; color: black; }
 
 /* Gradient background for the / page */
-.main { background: #00c6ff; background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); background: linear-gradient(to left, #00c6ff , #0072ff); }
+.main { background: #FAFAFAFA; }
 
 /* Login screen background image */
  .login { background: url('/background.jpg'); height : 100% background-attachment : fixed; background-position : center; background-repeat : no-repeat; background-size : cover; }
@@ -41,6 +41,8 @@ a, a:link, a:visited, a:active, a:hover { text-decoration : none !important; col
 
 /* ==================== ANY BOOTSTRAP MODIFICATIONS ARE DONE BELOW ==================== */
 
+/* Panel Modifications : The body now stops texts from bleeding */
+.panel-body { word-break: break-all; }
 
 /* Navbar Modifications : Made the nav transparent with this class */
 .transparent
