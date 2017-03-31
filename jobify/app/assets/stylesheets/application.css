@@ -31,7 +31,7 @@ a, a:link, a:visited, a:active, a:hover { text-decoration : none !important; col
 .main { background: #00c6ff; background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); background: linear-gradient(to left, #00c6ff , #0072ff); }
 
 /* Login screen background image */
- .login { background: url('/background.jpg'); height : 100% background-attachment : fixed; background-position : center; background-repeat : no-repeat; background-size : cover; }
+ .login { background: url('/background.jpg'); height : 100%; background-attachment : fixed; background-position : center; background-repeat : no-repeat; background-size : cover; }
 
 /* Wrapper for the sections */
  .wrapper { padding: 50px; vertical-align: middle; height: 100%; display: table-cell; }
