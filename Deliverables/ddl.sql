@@ -33,9 +33,10 @@ CREATE TABLE students
 CREATE TABLE company
 (
   name VARCHAR(100) NOT NULL,
-  info TEXT NOT NULL,
-  number_of_employees INT NOT NULL,
+  sector TEXT NOT NULL,
   rating FLOAT NOT NULL,
+  website VARCHAR(255) NOT NULL,
+  icon_path VARCHAR(255) NOT NULL,
   PRIMARY KEY (name)
 );
 
@@ -122,6 +123,28 @@ CREATE TABLE jobs_applied
   FOREIGN KEY (job_id) REFERENCES jobs(job_id)
 );
 
+CREATE TABLE tags
+(
+  tag_name VARCHAR(255) NOT NULL,
+  tag_id INT NOT NULL,
+  job_id INT NOT NULL,
+  PRIMARY KEY (tag_id),
+  FOREIGN KEY (job_id) REFERENCES jobs(job_id)
+);
+
+CREATE TABLE Comments
+(
+  comment_id INT NOT NULL,
+  for_job INT NOT NULL,
+  for_company INT NOT NULL,
+  job_id INT NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  student_id INT NOT NULL,
+  FOREIGN KEY (job_id) REFERENCES jobs(job_id),
+  FOREIGN KEY (name) REFERENCES company(name),
+  FOREIGN KEY (student_id) REFERENCES students(student_id)
+);
+
 CREATE TABLE program
 (
   program_id INT NOT NULL,
@@ -158,3 +181,4 @@ CREATE TABLE grades
   FOREIGN KEY (Student_id) REFERENCES students(student_id),
   FOREIGN KEY (course_id) REFERENCES courses(course_id)
 );
+
