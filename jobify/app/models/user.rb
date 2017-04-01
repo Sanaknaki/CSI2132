@@ -5,4 +5,6 @@ class User < ApplicationRecord
                        :length => {:within => 6..40},
                        :on => :create
   validates_uniqueness_of :email
+  has_one :student
+  has_one :moderator
 end
