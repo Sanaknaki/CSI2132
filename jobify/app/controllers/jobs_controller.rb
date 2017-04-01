@@ -1,6 +1,7 @@
 # company controller
 class JobsController < ApplicationController
   # TODO: Add company logo to db
+  # TODO: fetch job for compaines
   def index
     @jobs = Job.all
     render('index')
@@ -10,4 +11,6 @@ class JobsController < ApplicationController
     @job = Job.find(params[:id])
     render('job_details')
   end
+
+  def companies_jobs; end
 end
