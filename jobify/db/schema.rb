@@ -10,15 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170331144944) do
+ActiveRecord::Schema.define(version: 20170401205511) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
     t.string   "sector"
     t.string   "rating"
     t.string   "website"
-    t.string   "colour"
-
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -77,20 +75,22 @@ ActiveRecord::Schema.define(version: 20170331144944) do
   end
 
   create_table "resumes", force: :cascade do |t|
-    t.binary   "resume"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.string   "pdf_file_name"
-    t.string   "pdf_content_type"
-    t.integer  "pdf_file_size"
-    t.datetime "pdf_updated_at"
+    t.string   "resume_path"
+    t.integer  "version"
+    t.integer  "student_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["student_id"], name: "index_resumes_on_student_id"
   end
 
   create_table "students", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "student_num"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["user_id"], name: "index_students_on_user_id"
   end
 
   create_table "universities", force: :cascade do |t|
