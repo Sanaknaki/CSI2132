@@ -13,13 +13,13 @@
                 <% end %>
               </ul>
             <% end %>
-            <input type="text" name="user[name]" id="user_name" class="form-control black-input" placeholder="Name" />
+            <input type="text" name="user[name]" id="user_name" class="form-control black-input" placeholder="Name" required/>
             <br>
-            <input type="text" name="user[email]" id="user_email" class="form-control black-input" placeholder="Email" />
+            <input type="email" name="user[email]" id="user_email" class="form-control black-input" placeholder="Email" data-error="Bruh, that email address is invalid" required/>
             <br>
-            <input type="password" name="user[password]" id="user_password" class="form-control black-input" placeholder="Password" />
+            <input type="password" name="user[password]" id="user_password" class="form-control black-input" placeholder="Password" required/>
             <br>
-            <input type="password" name="user[password_confirmation]" id="user_password_confirmation" class="form-control black-input" placeholder="Confirm Password" />
+            <input type="password" name="user[password_confirmation]" id="user_password_confirmation" class="form-control black-input" placeholder="Confirm Password" required/>
             <br><br>
             <!-- <input class="btn btn&#45;black" type="submit" name="commit" value="Sign Up" data&#45;disable&#45;with="Submit" /> -->
         </div>
