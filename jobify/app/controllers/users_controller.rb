@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if params[:is_student]
       @student = Student.new(person_params)
+      @student.save
     elsif params[:is_moderator]
       @moderator = Moderator.new(person_params)
     end
