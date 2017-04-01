@@ -48,27 +48,17 @@
               <div class="panel-heading"><b>Google</b> added a job! <br> <font size = "2px">Junior Software Engineer</font></div>
                 <div class="panel-body">
                   <img draggable = "false" height="50px" width="50px" src="/icon/Google_icon.png">
-
                   <br>
                   <br>
                   <a href = "#">
                     <button class = "btn btn-black btn-md">view</button>
                   </a>
 
-                  <br>
-
-                  <font size = "1px">hi</font>
+                  <br><br>
+                  <font size = "1px">about a second ago.</font>
                 </div>
               </div>
 
-              <div class="panel panel-danger">
-                <div class="panel-heading"><b>Apple</b> is now the lowest ranked! <br></div>
-                  <div class="panel-body">
-                    <img draggable = "false" height="50px" width="50px" src="/icon/Apple_icon.png">
-                    <br>
-                    <font size = "1px">1</font>
-                  </div>
-                </div>
 
             <% if @list_all_companies %>
               <% @list_all_companies.each do |company| %>
@@ -84,7 +74,7 @@
                         </a>
 
                         <br><br>
-                        <font size = "1px"><%= time_ago_in_words(company.created_at) %></font>
+                        <font size = "1px"><%= time_ago_in_words(company.created_at) %> ago.</font>
                       </div>
                     </div>
               <% end %>

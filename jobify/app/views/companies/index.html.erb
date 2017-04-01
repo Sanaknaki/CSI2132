@@ -23,8 +23,6 @@
     </div>
   </nav>
 
-<div class="full-screen-section main wrapper">
-  <div id="exTab3">
     <ul  class="nav nav-pills">
   	   <li class="active">
          <a  href="#1b" data-toggle="tab">All Companies</a>
@@ -41,18 +39,30 @@
             <div class="half-screen-section">
               <div class="wrapper header-container">
                 <div class="row">
+
                   <% @companies.each do |company| %>
-                    <div class="col-md-4">
-                      <a style="color : black;" title="<%= company.name %>" href='/companies/<%= company.id %>'>
+                    <div class="col-md-6">
+                      <a href = "/companies/<%= company.id %>">
+                        <div class="panel panel-default" style = "border-bottom-color: black !important;">
+                          <div class="panel-heading text-center" style = "background-color: #<%= company.colour %>; border-bottom-color: #<%= company.colour %> !important;">
+                            <div class="col-md-3">
+                              <img draggable = "false" height="90px" width="90px" src="/icon/<%= company.name %>_icon.png">
+                            </div>
+                            <h1 style = "color : white !important;"><%= company.rating %></h1>
+                            <i style="color: white;" class="fa fa-globe" aria-hidden="true"></i> <a href="<%= company.website %>"><font style="color: white;" >website</font></a>
+                          </div>
+                        </div>
+                      </a>
+                      <!--<a style="color : black;" title="<%= company.name %>" href='/companies/<%= company.id %>'>
                         <div class="panel panel-default" style="background-color: #<%= company.colour %>;">
                           <div class="panel-body">
                             <img draggable="false" height="50" width="50" src="/icon_w/<%= company.name %>_icon_w.png">
                             <h1 style="text-transform: uppercase; color : white;"><%= company.name %></h1>
-                            <!--<h4><%= company.rating %></h4>-->
+                            <h4><%= company.rating %></h4>
 
                           </div>
                         </div>
-                      </a>
+                      </a>-->
                       <!--<a href='/companies/<%= company.id %>'>
                         <div class="well">
                           <h1 style="text-transform: uppercase;"><%= company.name %></h1>
@@ -70,16 +80,18 @@
             <div class="half-screen-section">
               <div class="wrapper header-container">
                 <div class="row">
+
                   <% if @recently_added_companies %>
                     <% @recently_added_companies.each do |company| %>
-                      <div class="col-md-4">
-                        <a style="color : black;" title="<%= company.name %>" href='/companies/<%= company.id %>'>
-                          <div class="panel panel-default" style="background : url('/bg/<%= company.name %>_bg.png'); /*background-position : bottom; background-repeat : no-repeat; background-size : 100% 5px;*/">
-                            <div class="panel-body">
-                              <img draggable="false" height="50" width="50" src="/icon_w/<%= company.name %>_icon_W.png">
-                              <h1 style="text-transform: uppercase; color : white;"><%= company.name %></h1>
-                              <!--<h4><%= company.rating %></h4>-->
-
+                      <div class="col-md-6">
+                        <a href = "/companies/<%= company.id %>">
+                          <div class="panel panel-default" style = "border-bottom-color: black !important;">
+                            <div class="panel-heading text-center" style = "background-color: #<%= company.colour %>; border-bottom-color: #<%= company.colour %> !important;">
+                              <div class="col-md-3">
+                                <img draggable = "false" height="90px" width="90px" src="/icon/<%= company.name %>_icon.png">
+                              </div>
+                              <h1 style = "color : white !important;"><%= company.rating %></h1>
+                              <i style="color: white;" class="fa fa-globe" aria-hidden="true"></i> <a href="<%= company.website %>"><font style="color: white;" >website</font></a>
                             </div>
                           </div>
                         </a>
@@ -103,14 +115,15 @@
                 <div class="row">
                   <% if @top_five %>
                     <% @top_five.each do |company| %>
-                      <div class="col-md-4">
-                        <a style="color : black;" title="<%= company.name %>" href='/companies/<%= company.id %>'>
-                          <div class="panel panel-default" style="background : url('/bg/<%= company.name %>_bg.png'); /*background-position : bottom; background-repeat : no-repeat; background-size : 100% 5px;*/">
-                            <div class="panel-body">
-                              <img draggable="false" height="50" width="50" src="/icon_w/<%= company.name %>_icon_W.png">
-                              <h1 style="text-transform: uppercase; color : white;"><%= company.name %></h1>
-                              <!--<h4><%= company.rating %></h4>-->
-
+                      <div class="col-md-6">
+                        <a href = "/companies/<%= company.id %>">
+                          <div class="panel panel-default" style = "border-bottom-color: black !important;">
+                            <div class="panel-heading text-center" style = "background-color: #<%= company.colour %>; border-bottom-color: #<%= company.colour %> !important;">
+                              <div class="col-md-3">
+                                <img draggable = "false" height="90px" width="90px" src="/icon/<%= company.name %>_icon.png">
+                              </div>
+                              <h1 style = "color : white !important;"><%= company.rating %></h1>
+                              <i style="color: white;" class="fa fa-globe" aria-hidden="true"></i> <a href="<%= company.website %>"><font style="color: white;" >website</font></a>
                             </div>
                           </div>
                         </a>
@@ -128,8 +141,6 @@
             </div>
   				</div>
   			</div>
-    </div>
-</div>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
