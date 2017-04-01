@@ -17,10 +17,9 @@ ActiveRecord::Schema.define(version: 20170331144944) do
     t.string   "sector"
     t.string   "rating"
     t.string   "website"
-    t.string   "colour"
-
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.         "colour"
   end
 
   create_table "courses", force: :cascade do |t|
