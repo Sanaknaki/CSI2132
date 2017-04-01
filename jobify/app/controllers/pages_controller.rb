@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   layout 'index_layout', only: [:main]
   before_filter :authorize, only: [:home]
   def home
-    @list_all_companies = Company.all
+    @list_all_companies = Company.order(created_at: :desc)
     @recently_added_companies = Company.order(created_at: :desc).limit(5)
     render('index')
   end

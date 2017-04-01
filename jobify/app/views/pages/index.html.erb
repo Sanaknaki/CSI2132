@@ -19,13 +19,52 @@
 
         <br><br>
 
+        <div class="col-md-3">
+          <div class="panel panel-primary">
+            <div class="panel-heading"><b>Google</b> added a job! <br> <font size = "2px">Junior Software Engineer</font></div>
+              <div class="panel-body">
+                <img draggable = "false" height="50px" width="50px" src="/icon/Google_icon.png">
+
+                <br>
+                <br>
+                <a href = "#">
+                  <button class = "btn btn-primary btn-md">view</button>
+                </a>
+
+                <br>
+
+                <font size = "1px">hi</font>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3" style="vertical-align: middle; padding-top: 35px ; padding-bottom: 35px;">
+            <div class="panel panel-danger">
+              <div class="panel-heading"><b>Apple</b> is now the lowest ranked! <br></div>
+                <div class="panel-body">
+                  <img draggable = "false" height="50px" width="50px" src="/icon/Apple_icon.png">
+                  <br>
+                  <font size = "1px">1</font>
+                </div>
+              </div>
+            </div>
+
         <% if @list_all_companies %>
           <% @list_all_companies.each do |company| %>
             <div class="col-md-3">
-              <div class="panel panel-default">
-                <div class="panel-heading"><b>New company added!</b></div>
+              <div class="panel panel-success">
+                <div class="panel-heading">Welcome <b><%= company.name %></b> to Jobify!</div>
                   <div class="panel-body">
                     <img draggable = "false" height="50px" width="50px" src="/icon/<%= company.name %>_icon.png">
+
+                    <br><br>
+
+                    <a href = "/companies/<%= company.id %>">
+                      <button class = "btn btn-primary btn-md">view</button>
+                    </a>
+
+                    <br><br>
+                    <font size = "1px"><%= company.created_at %></font>
                   </div>
                 </div>
               </div>
