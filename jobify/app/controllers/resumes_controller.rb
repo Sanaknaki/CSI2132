@@ -30,6 +30,23 @@ class ResumesController < ApplicationController
     render('upload')
   end
 
+  def new_version
+    uploaded_io = params[:resume_pdf]
+    @student = User.find_by_id(session[:user_id]).student
+    ver = @student.resume.last ? @student.resume.last.id + 1 : 1
+    ext = /\.[a-zA-Z]+/.match(uploaded_io.original_filename).to_s
+    path = @student.student_num.to_s + '_' + ver.to_s + ext
+    File.open(Rails.root.join('public', path), 'wb') do |file|
+      file.write(uploaded_io.read)
+    end
+    @resume = @student.resume.create(
+      :resume_path => path,
+      :version => ver
+    )
+    @resume.save
+    redirect_to '/'
+  end
+
   private
 
   # Use strong_parameters for attribute whitelisting
