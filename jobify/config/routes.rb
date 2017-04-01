@@ -30,6 +30,6 @@ Rails.application.routes.draw do
   get '/resumes' => 'resumes#upload'
   post '/resumes' => 'resumes#create'
   # student resumes
-  # get '/student/:id/resumes' => 'students#fetch_student_resumes'
+  get '/student/:id/resumes/' => 'students#fetch_student_resumes'
   # get '/student/:id/resumes/:rid' => 'students#fetch_student_resume_by_id'
 end
