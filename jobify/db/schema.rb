@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328005414) do
+ActiveRecord::Schema.define(version: 20170331144944) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -78,8 +78,12 @@ ActiveRecord::Schema.define(version: 20170328005414) do
 
   create_table "resumes", force: :cascade do |t|
     t.binary   "resume"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "pdf_file_name"
+    t.string   "pdf_content_type"
+    t.integer  "pdf_file_size"
+    t.datetime "pdf_updated_at"
   end
 
   create_table "students", force: :cascade do |t|

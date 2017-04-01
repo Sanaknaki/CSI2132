@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   def home
     @list_all_companies = Company.order(created_at: :desc)
     @recently_added_companies = Company.order(created_at: :desc).limit(5)
+    @recently_added_companies = Company.all
     render('index')
   end
 

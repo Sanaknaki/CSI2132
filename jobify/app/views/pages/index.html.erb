@@ -70,10 +70,38 @@
               </div>
           <% end %>
         <% end %>
-
+  <div class="half-screen-section main">
+    <div class="wrapper">
+      <div class="row">
+        <div class="header-container">
+          <h1>Welcome back!</h1>
+          <!--<div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-heading text-center"><h1 style="font-size : 15px; text-transform : uppercase;">Recently Added Jobs</h1></div>
+                <li class="list-group-item">
+                  <% if @recently_added_companies %>
+                    <% @recently_added_companies.each do |company| %>
+                        <img draggable = "false" height="50px" width="50px" src="/icon/<%= company.name %>_icon.png">
+                    <% end %>
+                  <% end %>
+                </li>
+            </div>
+          </div>-->
+        </div>
       </div>
     </div>
   </div>
+  <ul class="images">
+    <% if @recently_added_companies %>
+      <% @recently_added_companies.each do |company| %>
+        <a href = "/companies/<%= company.id %>">
+          <li>
+                <img style = "height: 150px; width: 150px; background : url('/bg/<%= company.name %>_bg.png');" draggable = "false" height="150px" width="150px" src="/icon/<%= company.name %>_icon.png">
+          </li>
+        </a>
+      <% end %>
+    <% end %>
+  </ul>
 
 </body>
 

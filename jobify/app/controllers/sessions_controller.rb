@@ -1,6 +1,6 @@
 # app/controllers/sessions_controller.rb
 class SessionsController < ApplicationController
-  before_filter :authenticate_user, :except => [:new, :create, :destroy]
+  before_filter :authenticate_user, except: [:new, :create, :destroy]
   layout 'index_layout', only: [:new, :create]
   def new
     unless session[:user_id] || (User.find_by_id(session[:user_id]))
