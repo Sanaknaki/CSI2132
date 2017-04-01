@@ -1,8 +1,9 @@
 # personal website controller
 class PagesController < ApplicationController
-  layout 'index_layout', only: [:home]
-  before_filter :authorize, only: [:main]
+  layout 'index_layout', only: [:main]
+  before_filter :authorize, only: [:home]
   def home
+    @recently_added_companies = Company.all
     render('index')
   end
 

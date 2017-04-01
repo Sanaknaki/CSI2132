@@ -25,4 +25,11 @@ Rails.application.routes.draw do
   # students
   # job and company
   get '/companies/:c_id/jobs' => 'jobs#fetch_jobs_for_company'
+  # uploads
+  get '/resume' => 'resumes#index'
+  get '/resumes' => 'resumes#upload'
+  post '/resumes' => 'resumes#create'
+  # student resumes
+  # get '/student/:id/resumes' => 'students#fetch_student_resumes'
+  # get '/student/:id/resumes/:rid' => 'students#fetch_student_resume_by_id'
 end
