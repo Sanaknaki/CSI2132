@@ -1,0 +1,1 @@
+INSERT INTO companies (name, sector, website, colour, rating, created_at, updated_at) VALUES("Apple", "tech", "https://www.apple.com", "000000", 0.5, (SELECT datetime('now', 'localtime')), (SELECT datetime('now', 'localtime')));

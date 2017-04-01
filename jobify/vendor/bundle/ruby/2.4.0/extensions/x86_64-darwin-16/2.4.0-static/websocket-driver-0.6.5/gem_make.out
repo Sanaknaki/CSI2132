@@ -1,0 +1,15 @@
+current directory: /Users/AliSanaknaki/Desktop/code/jobify/jobify/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+/Users/AliSanaknaki/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20170401-3948-16y0ocj.rb extconf.rb
+creating Makefile
+
+current directory: /Users/AliSanaknaki/Desktop/code/jobify/jobify/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/AliSanaknaki/Desktop/code/jobify/jobify/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/AliSanaknaki/Desktop/code/jobify/jobify/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20170401-3948-1pyeirf

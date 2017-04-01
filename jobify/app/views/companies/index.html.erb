@@ -44,7 +44,7 @@
                   <% @companies.each do |company| %>
                     <div class="col-md-4">
                       <a style="color : black;" title="<%= company.name %>" href='/companies/<%= company.id %>'>
-                        <div class="panel panel-default" style="background : url('/bg/<%= company.name %>_bg.png'); /*background-position : bottom; background-repeat : no-repeat; background-size : 100% 5px;*/">
+                        <div class="panel panel-default" style="background-color: #<%= company.colour %>;">
                           <div class="panel-body">
                             <img draggable="false" height="50" width="50" src="/icon_w/<%= company.name %>_icon_W.png">
                             <h1 style="text-transform: uppercase; color : white;"><%= company.name %></h1>
