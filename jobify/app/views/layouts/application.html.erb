@@ -16,7 +16,7 @@
 
 <body>
 
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -26,21 +26,25 @@
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand"><img draggable="false" height="23" width="60" src="logo_b.png"></a>
+        <a class="navbar-brand"><img draggable="false" height="33" width="80" src="/logo_B.png"></a>
       </div>
 
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="../navbar-static-top/"><i style="color : black;" class="fa fa-file-o fa-2x" aria-hidden="true"></i></a></li>
-          <li><a href="./"><i style="color : black;" class="fa fa-building-o fa-2x" aria-hidden="true"></i></a></li>
+          <% if User.find_by_id(session[:user_id]).student %>
+            <li><a href="/resumes">upload resume</a></li>
+            <li><a href="/student/<%= session[:user_id] %>/resumes">my resumes</a></li>
+          <% end %>
+          <li><a href="/"><i style="color : black;" class="fa fa-file-o fa-2x" aria-hidden="true"></i></a></li>
+          <li><a href="/companies"><i style="color : black;" class="fa fa-building-o fa-2x" aria-hidden="true"></i></a></li>
           <li>
-            <%= button_to "Log out", logout_path , method: 'delete' %>
+            <br>
+            <%= button_to "LOGOUT", logout_path , method: 'delete', style: "border: none !important; background: none !important; " %>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
 
   <%= yield %>
 </body>
