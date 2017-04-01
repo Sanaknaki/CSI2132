@@ -8,6 +8,7 @@ class ResumesController < ApplicationController
     File.open(Rails.root.join('public', uploaded_io.original_filename), 'wb') do |file|
       file.write(uploaded_io.read)
     end
+    redirect_to '/'
   end
 
   def index
@@ -26,6 +27,6 @@ class ResumesController < ApplicationController
   # Be sure to update your create() and update() controller methods.
 
   def resume_params
-    params.require().permit(:resume_pdf)
+    params.require.permit(:resume_pdf)
   end
 end
