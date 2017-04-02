@@ -1,4 +1,4 @@
 class Job < ApplicationRecord
   belongs_to :company
-  has_many :comments, dependant => :destroy
+  has_many :comment
 end

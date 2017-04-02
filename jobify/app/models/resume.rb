@@ -1,4 +1,4 @@
 class Resume < ApplicationRecord
   belongs_to :student
-  has_many :comments, dependant => :destroy
+  has_many :comment
 end
