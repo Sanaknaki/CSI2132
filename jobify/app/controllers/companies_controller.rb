@@ -12,6 +12,7 @@ class CompaniesController < ApplicationController
   def fetch_company
       @company = Company.find(params[:id])
       @job = Company.find(params[:id]).job
+      @comments = @company.comment
       render('company_details')
     end
 end
