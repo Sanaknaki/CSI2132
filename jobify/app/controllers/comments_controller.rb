@@ -31,13 +31,15 @@ class CommentsController < ApplicationController
   end
 
   def add_resume_comment
-    @resume = Resume.find(params[:resume_id])
-    @resume = @resume.comments.create(comment_params)
-    if @comment.save
-      redirect_to @resume
-    else
-      flash.now[:danger] = 'error'
-    end
+    @resume = Resume.find(params[:rid])
+    puts @resume
+    @comment = ResumeComment.new(
+      :ctext => params[:comment][:ctext],
+      :resume_id => params[:rid]
+    )
+    @comment.save
+    redirect_to :back
+    # redirect_to @resume
   end
 
   private

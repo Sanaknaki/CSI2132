@@ -24,6 +24,16 @@ class ResumesController < ApplicationController
     redirect_to '/'
   end
 
+  def resume_review
+    render 'find_student'
+  end
+
+  def find_student
+    @student = Student.find_by_id(params[:student][:number])
+    @resume = @student.resume
+    render 'index'
+  end
+
   def index
     @resumes = Resume.all
     render('index')
@@ -31,6 +41,12 @@ class ResumesController < ApplicationController
 
   def upload
     render('upload')
+  end
+
+  def fetch_student_resume_by_id
+    @resume = Resume.find(params[:rid])
+    @comments = @resume.resume_comment
+    render 'resume'
   end
 
   private

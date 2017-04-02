@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170402021459) do
+ActiveRecord::Schema.define(version: 20170402042342) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "ctext"
@@ -92,6 +92,14 @@ ActiveRecord::Schema.define(version: 20170402021459) do
     t.integer  "required_number_of_credits"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+  end
+
+  create_table "resume_comments", force: :cascade do |t|
+    t.text     "ctext"
+    t.integer  "resume_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["resume_id"], name: "index_resume_comments_on_resume_id"
   end
 
   create_table "resumes", force: :cascade do |t|

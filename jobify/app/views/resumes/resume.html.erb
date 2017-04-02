@@ -1,0 +1,14 @@
+<a href="/student/<%= @resume.student_id %>/resumes/">Back</a>
+<br>
+<%= @resume.created_at %>
+<ul>
+  <% @comments.each do |comment| %>
+    <li><%= comment.ctext %></li>
+  <% end %>
+</ul>
+<% if User.find_by_id(session[:user_id]).moderator %>
+  <%= form_for :comment, url: '/student/'+@resume.student_id.to_s+'/resumes/'+@resume.id.to_s do |f| %>
+    <input type="textarea" placeholder="comment" name="comment[ctext]"/>
+    <button type="submit">Submit</button>
+  <% end %>
+<% end %>
