@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20170401235716) do
     t.string   "website"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.         "colour"
   end
 
   create_table "courses", force: :cascade do |t|
