@@ -12,9 +12,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if params[:is_student]
-      @student = Student.new(person_params)
+      @student = Student.create(student_params)
+      @user.student = @student
+      @student.save
     elsif params[:is_moderator]
-      @moderator = Moderator.new(person_params)
+      @moderator = Moderator.new(moderator_params)
+      @moderator.save
+      @user.moderator = @moderator
     end
     if @user.save
       session[:user_id] = @user.id
@@ -39,10 +43,19 @@ class UsersController < ApplicationController
     )
   end
 
-  def person_params
+  def student_params
+    params.require(:person).permit(
+      :first_name,
+      :last_name,
+      :student_num
+    )
+  end
+
+  def moderator_params
     params.require(:person).permit(
       :first_name,
       :last_name
     )
   end
+
 end
