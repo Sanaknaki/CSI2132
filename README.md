@@ -16,6 +16,10 @@ git clone git@github.com:Abdulwahaab710/CSI2132.git
 ```bash
 cd CSI2132/jobify
 ```
+- Set the env to production
+```bash
+RAILS_ENV=production
+```
 - Run bundle installer
 ```bash
 bundle install
