@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170401223557) do
+ActiveRecord::Schema.define(version: 20170401235716) do
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "ctext"
+    t.boolean  "is_company"
+    t.boolean  "is_job"
+    t.boolean  "is_resume"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -50,6 +59,8 @@ ActiveRecord::Schema.define(version: 20170401223557) do
     t.integer  "ranking"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "company_id"
+    t.index ["company_id"], name: "index_jobs_on_company_id"
   end
 
   create_table "moderators", force: :cascade do |t|
