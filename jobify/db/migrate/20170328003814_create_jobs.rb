@@ -4,7 +4,6 @@ class CreateJobs < ActiveRecord::Migration[5.0]
       t.text :job_description
       t.integer :level_direct_to
       t.integer :ranking
-	  has_many :comments, dependant => :destroy
       t.timestamps
     end
   end

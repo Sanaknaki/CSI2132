@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170401235716) do
     t.string   "sector"
     t.string   "rating"
     t.string   "website"
+    t.string   "colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
