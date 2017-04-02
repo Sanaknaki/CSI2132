@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import datetime
 import sqlite3
 
-conn = sqlite3.connect('/vagrant/eightpm/CSI2132/jobify/db/development.sqlite3')
+conn = sqlite3.connect('../CSI2132/jobify/db/development.sqlite3')
 cur = conn.cursor()
 
 #search api for engineeing companies(id,name,sector,rating,website,created_at,updated_at)
