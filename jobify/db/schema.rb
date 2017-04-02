@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170402004352) do
+ActiveRecord::Schema.define(version: 20170401235716) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "ctext"
@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20170402004352) do
     t.string   "colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "colour"
   end
 
   create_table "courses", force: :cascade do |t|
