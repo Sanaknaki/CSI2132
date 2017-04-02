@@ -1,5 +1,5 @@
 
-# CSI2132
+# Jobify
 Our project for Database I (CSI2132)
 ## To run the web app
 ### requirements
