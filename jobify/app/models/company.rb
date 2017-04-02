@@ -1,4 +1,4 @@
 class Company < ApplicationRecord
   has_many :job
-  has_many :comments, dependant => :destroy
+  has_many :comment
 end
