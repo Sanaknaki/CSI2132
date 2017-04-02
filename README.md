@@ -12,6 +12,10 @@ Installation
 ```bash
 git clone git@github.com:Abdulwahaab710/CSI2132.git
 ```
+- change directory
+```bash
+cd CSI2132/jobify
+```
 - Run bundle installer
 ```bash
 bundle install
