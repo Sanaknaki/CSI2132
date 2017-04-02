@@ -3,8 +3,8 @@
 Our project for Database I (CSI2132)
 ## To run the web app
 ### requirements
-Ruby == 2.4.0
-Postgresql
+- Ruby == 2.4.0
+- Postgresql
 
 Installation
 ---
