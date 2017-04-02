@@ -15,6 +15,20 @@
 
 <body>
 
+  <div class="half-screen-section">
+    <div class="wrapper header-container">
+      <div class="row">
+        <div class="col-md-12">
+          <br><br>
+        </div>
+        <% @companies.each do |company| %>
+          <div class="col-md-6">
+            <a style="color : black;" title="<%= company.name %>" href='/companies/<%= company.id %>'>
+              <div class="panel panel-default" style="background : url('/bg/<%= company.name %>_bg.png'); /*background-position : bottom; background-repeat : no-repeat; background-size : 100% 5px;*/">
+                <div class="panel-body">
+                  <img draggable="false" height="50" width="50" src="/icon_w/<%= company.name %>_icon_w.png">
+                  <h1 style="text-transform: uppercase; color : white;"><%= company.name %></h1>
+                  <!--<h4><%= company.rating %></h4>-->
   <nav class="navbar transparent navbar-static-top">
     <div class="container">
       <div class="navbar-header">
@@ -36,7 +50,6 @@
   		</ul>
 
   			<div class="tab-content clearfix">
-
   			  <div class="tab-pane active" id="1b">
             <div class="half-screen-section">
               <div class="wrapper header-container">
