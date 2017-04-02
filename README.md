@@ -32,3 +32,8 @@ rake db:migrate
 ```
 rails s
 ```
+
+- Screenshots
+
+![Alt text](/screenshots/login.png "Login Screen")
+
