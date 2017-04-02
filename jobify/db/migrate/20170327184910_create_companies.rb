@@ -6,7 +6,7 @@ class CreateCompanies < ActiveRecord::Migration[5.0]
       t.string :rating
       t.string :website
       t.string :colour
-
+	  has_many :companycomments
       t.timestamps
     end
   end

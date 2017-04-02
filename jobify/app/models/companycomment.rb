@@ -1,0 +1,2 @@
+class Companycomment < ApplicationRecord
+end
