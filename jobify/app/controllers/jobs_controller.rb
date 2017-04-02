@@ -13,4 +13,8 @@ class JobsController < ApplicationController
   end
 
   def companies_jobs; end
+
+  def fetch_jobs_for_company
+    @jobs = Company.find_by_id(params[:c_id]).job
+  end
 end
