@@ -31,7 +31,6 @@
 
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/resumes">RESUMES</a></li>
           <li><a href="/companies">COMPANIES</a></li>
           <% if User.find_by_id(session[:user_id]).student %>
             <li><a href="/resumes">upload resume</a></li>
