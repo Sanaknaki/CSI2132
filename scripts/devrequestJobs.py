@@ -1,10 +1,10 @@
 import urllib2, sys
 import json
 from bs4 import BeautifulSoup
-import psycopg2
 import sys
 import datetime
 import random
+import sqlite3
 
 conn = sqlite3.connect('../CSI2132/jobify/db/development.sqlite3')
 cur = conn.cursor()

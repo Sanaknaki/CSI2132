@@ -1,8 +1,6 @@
 import urllib2, sys
 import json
 from bs4 import BeautifulSoup
-# import psycopg2
-# import sys
 import datetime
 import sqlite3
 
