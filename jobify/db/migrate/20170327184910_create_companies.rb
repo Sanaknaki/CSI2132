@@ -5,6 +5,7 @@ class CreateCompanies < ActiveRecord::Migration[5.0]
       t.string :sector
       t.string :rating
       t.string :website
+	  has_many :comments, dependant => :destroy
       t.string :colour
 
       t.timestamps
