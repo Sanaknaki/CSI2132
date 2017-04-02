@@ -54,26 +54,26 @@
 
         </div>
 
-        <div class= "col-md-1"></div>
-        <div class="col-md-6">
+        <div class= "col-md-2"></div>
+        <div class="col-md-5 text-center">
+
+          <%= form_for :comment, url: '/companies/'+@company.id.to_s+'/comment' do |f| %>
+            <textarea  placeholder="Enter your comment!" name="comment[ctext]" required=""/></textarea>
+            <br>
+            <button class="btn btn-black"  type="submit">Submit</button>
+          <% end %>
+
         <% @comments.each do |comment| %>
           <div class="panel panel-default">
             <div class="panel-heading">
               <div class = "row">
-
-              <div class = "col-md-6">
-                <h3 class="panel-title text-right">Rating</h3>
-              </div>
+                <h3 class="panel-title text-center">Comment</h3>
             </div>
             </div>
             <div class="panel-body"><%= comment.ctext %></div>
-            
+
           </div>
         <% end %>
-            <%= form_for :comment, url: '/companies/'+@company.id.to_s+'/comment' do |f| %>
-              <input type="textarea" placeholder="comment" name="comment[ctext]"/>
-              <button type="submit">Submit</button>
-            <% end %>
         </div>
       </div>
     </div>
