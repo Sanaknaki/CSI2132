@@ -29,10 +29,9 @@
   <div class="half-screen-section">
     <div class="wrapper">
       <div class="row">
-
         <div class="col-md-5 col-md-offset-right-1">
-          <div class="panel panel-default" style = "border-bottom-color: black !important;">
-            <div class="panel-heading text-center" style = "border-bottom-color: #f5f5f5 !important;">
+          <div class="panel panel-default">
+            <div class="panel-heading text-center">
               <div class="col-md-3">
                 <img draggable = "false" height="90px" width="90px" src="/icon/<%= @company.name %>_icon.png">
               </div>
@@ -42,22 +41,16 @@
           </div>
 
           <div class="panel panel-default">
-            <div class="panel-heading text-center"><h1 style="text-transform : uppercase;">Jobs</h1></div>
-            <ul class="list-group">
-              <li class="list-group-item">
-                <p class="text-left"><i class="fa fa-pencil" aria-hidden="true"></i> Job Title Here</p>
-                <p class="text-right"><i class="fa fa-usd" aria-hidden="true"></i> 10'000</p>
-              </li>
-              <li class="list-group-item">
-                <p class="text-left"><i class="fa fa-pencil" aria-hidden="true"></i> Job Title Here</p>
-                <p class="text-right"><i class="fa fa-usd" aria-hidden="true"></i> 35'000</p>
-              </li>
-              <li class="list-group-item">
-                <p class="text-left"><i class="fa fa-pencil" aria-hidden="true"></i> Job Title Here</p>
-                <p class="text-right"><i class="fa fa-usd" aria-hidden="true"></i> N/A</p>
-              </li>
-            </ul>
-          </div>
+                      <div class="panel-heading text-center"><h1 style="text-transform : uppercase;">Jobs</h1></div>
+                      <ul class="list-group">
+                      <% @job.each do |j| %>
+                        <li class="list-group-item">
+                          <p class="text-left" style="text-transform: uppercase;"><i class="fa fa-pencil" aria-hidden="true"></i> <%= j.job_description %></p>
+                          <p class="text-right"><i class="fa fa-usd" aria-hidden="true"></i><%= j.level_direct_to %></p>
+                        </li>
+                      <% end %>
+                      </ul>
+                    </div>
 
         </div>
 

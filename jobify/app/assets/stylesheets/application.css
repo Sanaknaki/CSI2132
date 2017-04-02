@@ -46,32 +46,8 @@ tr { width: 100%; display: inline-table; }
 table { height:300px; }
 tbody { overflow-y: scroll; height: 200px; width: 100%; position: absolute; }
 
-/* Navbar Modifications : Made bottom border black to fit theme */
-.navbar-default { border-bottom-color: black !important; }
-
-/* Panel Modifications : Border is black to fit theme */
-.panel { border-color: black !important; }
-
-/* Panel Modifications : Made bottom border black to fit theme */
-.panel-heading { border-bottom-color: black !important; }
-
 /* Panel Modifications : The body now stops texts from bleeding */
 .panel-body { word-break: break-all; }
-
-/* Nav-Pill Modifications : Changing to fit the theme */
-.nav-pills > .active > a,
-.nav-pills > .active > a:hover,.nav-pills > li > a:hover {
-text-decoration: none;
-border-radius:0px;
-border-bottom-width: 2px;
-border-bottom-style: solid;
-border-color: black;
-    color: #000 !important;
-  background-color: transparent !important;
-}
-.nav-pills > li > a{
-    border-radius:0px;
-}
 
 /* Navbar Modifications : Made the nav transparent with this class */
 .transparent
