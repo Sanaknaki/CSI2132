@@ -10,7 +10,8 @@ class CompaniesController < ApplicationController
   end
 
   def fetch_company
-    @company = Company.find(params[:id])
-    render('company_details')
-  end
+      @company = Company.find(params[:id])
+      @job = Company.find(params[:id]).job
+      render('company_details')
+    end
 end

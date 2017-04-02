@@ -13,45 +13,46 @@
 </head>
 
 <body>
-  <div class="full-screen-section main">
+  <div class="full-screen-section">
     <div class = "container text-center">
       <div class="row">
+        <div class="col-md-3"></div>
 
-        <br><br>
-
-        <div class="col-md-3">
-          <div class="panel panel-primary">
-            <div class="panel-heading"><b>Google</b> added a job! <br> <font size = "2px">Junior Software Engineer</font></div>
-              <div class="panel-body">
-                <img draggable = "false" height="50px" width="50px" src="/icon/Google_icon.png">
-
-                <br>
-                <br>
-                <a href = "#">
-                  <button class = "btn btn-primary btn-md">view</button>
-                </a>
-
-                <br>
-
-                <font size = "1px">hi</font>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3" style="vertical-align: middle; padding-top: 35px ; padding-bottom: 35px;">
-            <div class="panel panel-danger">
-              <div class="panel-heading"><b>Apple</b> is now the lowest ranked! <br></div>
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading"><b>Google</b> added a job! <br> <font size = "2px">Junior Software Engineer</font></div>
                 <div class="panel-body">
-                  <img draggable = "false" height="50px" width="50px" src="/icon/Apple_icon.png">
+                  <img draggable = "false" height="50px" width="50px" src="/icon/Google_icon.png">
+
                   <br>
-                  <font size = "1px">1</font>
+                  <br>
+                  <a href = "#">
+                    <button class = "btn btn-primary btn-md">view</button>
+                  </a>
                 </div>
               </div>
+
+        <% if @job_posts %>
+          <% @job_posts.each do |company| %>
+            <div class="panel panel-success">
+              <div class="panel-heading">Welcome <b><%= company.id %></b> to Jobify!</div>
+                <div class="panel-body">
+                  <img draggable = "false" height="50px" width="50px" src="/icon/<%= company.id %>_icon.png">
+                   <br><br>
+
+                   <a href = "/companies/<%= company.id %>">
+                     <button class = "btn btn-primary btn-md">view</button>
+                   </a>
+
+                   <br><br>
+                   <font size = "1px"><%= time_ago_in_words(company.created_at)  %> ago.</font>
+                </div>
             </div>
+          <% end %>
+        <% end %>
 
         <% if @list_all_companies %>
           <% @list_all_companies.each do |company| %>
-            <div class="col-md-3">
               <div class="panel panel-success">
                 <div class="panel-heading">Welcome <b><%= company.name %></b> to Jobify!</div>
                   <div class="panel-body">
@@ -64,45 +65,14 @@
                     </a>
 
                     <br><br>
-                    <font size = "1px"><%= company.created_at %></font>
+                    <font size = "1px"><%= time_ago_in_words(company.created_at)  %> ago.</font>
                   </div>
                 </div>
-              </div>
           <% end %>
         <% end %>
-  <div class="half-screen-section main">
-    <div class="wrapper">
-      <div class="row">
-        <div class="header-container">
-          <h1>Welcome back!</h1>
-          <!--<div class="col-md-4">
-            <div class="panel panel-default">
-              <div class="panel-heading text-center"><h1 style="font-size : 15px; text-transform : uppercase;">Recently Added Jobs</h1></div>
-                <li class="list-group-item">
-                  <% if @recently_added_companies %>
-                    <% @recently_added_companies.each do |company| %>
-                        <img draggable = "false" height="50px" width="50px" src="/icon/<%= company.name %>_icon.png">
-                    <% end %>
-                  <% end %>
-                </li>
-            </div>
-          </div>-->
-        </div>
       </div>
-    </div>
-  </div>
-  <ul class="images">
-    <% if @recently_added_companies %>
-      <% @recently_added_companies.each do |company| %>
-        <a href = "/companies/<%= company.id %>">
-          <li>
-                <img style = "height: 150px; width: 150px; background : url('/bg/<%= company.name %>_bg.png');" draggable = "false" height="150px" width="150px" src="/icon/<%= company.name %>_icon.png">
-          </li>
-        </a>
-      <% end %>
-    <% end %>
-  </ul>
 
+        <div class="col-md-3"></div>
 </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

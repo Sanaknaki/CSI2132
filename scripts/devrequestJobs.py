@@ -6,7 +6,7 @@ import datetime
 import random
 import sqlite3
 
-conn = sqlite3.connect('../CSI2132/jobify/db/development.sqlite3')
+conn = sqlite3.connect('../jobify/db/development.sqlite3')
 cur = conn.cursor()
 #search api for programmer jobs(id pk, job_description, salary, years of experience required, company fk, created_at, updated_at)
 url = "http://api.glassdoor.com/api/api.htm?t.p=133980&t.k=kjtpIxrAhTc&userip=0.0.0.0&useragent=&format=json&v=1&action=jobs-prog&countryId=1&jobTitle=programmer"
