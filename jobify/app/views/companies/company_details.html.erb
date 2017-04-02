@@ -169,7 +169,12 @@
               see if the wrapper for this panel works if the user writes a LONG ASS explanation, my goodness graceious this is a very long text, but by golly
               we are going to keep it like this aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaand done.
             </div>
-          </div>
+            
+            </div>
+            <%= form_for :comment, url: '/companies/'+@company.id.to_s+'/comment' do |f| %>
+              <input type="textarea" placeholder="comment" name="comment[ctext]"/>
+              <button type="submit">Submit</button>
+            <% end %>
         </div>
       </div>
     </div>
