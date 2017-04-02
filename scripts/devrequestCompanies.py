@@ -6,12 +6,6 @@ from bs4 import BeautifulSoup
 import datetime
 import sqlite3
 
-#setup connection
-# try:
-#     conn = psycopg2.connect(dbname="dd37lpbldljtle", user="rzttticiuczhxy", host="ec2-54-221-244-196.compute-1.amazonaws.com", port="5432", password="1382bb0ab76347a000ab4c01482fd99b9c02ffc22705e682d5fbd44bec04ed38", sslmode="allow")
-#     cur = conn.cursor()
-# except psycopg2.Error as e:
-#     print e
 conn = sqlite3.connect('../CSI2132/jobify/db/development.sqlite3')
 cur = conn.cursor()
 
