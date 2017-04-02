@@ -26,7 +26,7 @@
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand"><img draggable="false" height="33" width="80" src="logo_b.png"></a>
+        <a class="navbar-brand"><img draggable="false" height="33" width="80" src="/logo_B.png"></a>
       </div>
 
       <div id="navbar" class="navbar-collapse collapse">
@@ -34,6 +34,16 @@
           <li><a href="/resumes">RESUMES</a></li>
           <li><a href="/companies">COMPANIES</a></li>
           <li><%= button_to "LOGOUT", logout_path , method: 'delete', style: "border: none !important; background: none !important; " %></li>
+          <% if User.find_by_id(session[:user_id]).student %>
+            <li><a href="/resumes">upload resume</a></li>
+            <li><a href="/student/<%= session[:user_id] %>/resumes">my resumes</a></li>
+          <% end %>
+          <li><a href="/"><i style="color : black;" class="fa fa-file-o fa-2x" aria-hidden="true"></i></a></li>
+          <li><a href="/companies"><i style="color : black;" class="fa fa-building-o fa-2x" aria-hidden="true"></i></a></li>
+          <li>
+            <br>
+            <%= button_to "LOGOUT", logout_path , method: 'delete', style: "border: none !important; background: none !important; " %>
+          </li>
         </ul>
       </div>
     </div>

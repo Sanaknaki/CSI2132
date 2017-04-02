@@ -11,7 +11,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by_email(params[:email].downcase)
+    if /@[a-zA-Z]+\.[a-zA-Z]+/.match(params[:email])
+      @user = User.find_by_email(params[:email].downcase)
+    else
+      @user = User.find_by_name(params[:email.downcase])
+    end
     # If the user exists AND the password entered is correct.
     if @user && @user.authenticate(params[:password])
       # Save the user id inside the browser cookie. This is how we keep the user
