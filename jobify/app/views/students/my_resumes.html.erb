@@ -1,5 +1,5 @@
 <ul>
   <% @resumes.each do |resume| %>
-    <li>Version <%=resume.version %>: <a href="<%= resume.resume_path %>"><%= resume.created_at %></a></li>
+    <li>Version <%=resume.version %>: <a href="<%= resume.resume_path %>"><%= resume.created_at %></a> <a href="/student/<%= resume.student_id %>/resumes/<%= resume.id %>">View reviews</a></li>
   <% end %>
 </ul>
