@@ -11,11 +11,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if params[:is_student]
+    if params[:user] == 'student'
       @student = Student.create(student_params)
       @user.student = @student
       @student.save
-    elsif params[:is_moderator]
+    elsif params[:user] == 'moderator'
       @moderator = Moderator.new(moderator_params)
       @moderator.save
       @user.moderator = @moderator

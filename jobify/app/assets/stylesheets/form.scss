@@ -1,0 +1,69 @@
+$background: #141241;
+$switchbg: #333;
+$white: #ffffff;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+@mixin clearfix {
+    zoom: 1;
+    &:before,
+    &:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+.switch {
+  text-align: center;
+  background-color: $switchbg;
+  width: 100%;
+  display: inline-table;
+  border-radius: 8px;
+  height: 40px;
+  padding: 5px;
+  position: relative;
+  @include clearfix;
+  label {
+    float: left;
+    width: 50%;
+    position: relative;
+    z-index: 2;
+    line-height: 40px;
+    cursor: pointer;
+    color: darken($switchbg, 15%);
+  }
+  input[type="radio"]{
+    display: none;
+    &:checked + label {
+      color: $background;
+      font-weight: bold;
+    }
+  }
+  input[type="radio"]{
+    display: none;
+    &:not(:checked) + label {
+      color: white;
+      // font-weight: bold;
+    }
+  }
+  span {
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: block;
+    border-radius: 5px 0 0 5px;
+    background-color: $white;
+    transition: all 200ms ease;
+    &.right {
+      left: 50%;
+      border-radius: 0 5px 5px 0;
+      transition: all 200ms ease;
+    }
+  }
+}
