@@ -104,6 +104,16 @@ ActiveRecord::Schema.define(version: 20170402042342) do
     t.index ["resume_id"], name: "index_resume_comments_on_resume_id"
   end
 
+  create_table "students", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "student_num"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["user_id"], name: "index_students_on_user_id"
+  end
+
   create_table "resumes", force: :cascade do |t|
     t.string   "resume_path"
     t.integer  "version"
@@ -115,15 +125,6 @@ ActiveRecord::Schema.define(version: 20170402042342) do
     t.index ["student_id"], name: "index_resumes_on_student_id"
   end
 
-  create_table "students", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.integer  "student_num"
-    t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["user_id"], name: "index_students_on_user_id"
-  end
 
   create_table "universities", force: :cascade do |t|
     t.string   "name"
