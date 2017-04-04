@@ -2,6 +2,7 @@
 class JobsController < ApplicationController
   # TODO: Add company logo to db
   # TODO: fetch job for compaines
+  before_filter :authorize
   def index
     @jobs = Job.all
     render('index')

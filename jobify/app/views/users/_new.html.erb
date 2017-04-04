@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag "form", media: "all" %>
+<%= javascript_include_tag "form", media: "all" %>
 <div id="signup" class="half-screen-section">
   <div class="wrapper">
     <div class="row">
@@ -13,11 +15,9 @@
                 <% end %>
               </ul>
             <% end %>
-            <input type="text" name="person[first_name]" class="form-control black-input" placeholder="First Name" required/>
+            <input type="text" name="person[first_name]" class="form-control black-input" placeholder="First name" required>
             <br>
-            <input type="text" name="person[last_name]" class="form-control black-input" placeholder="Last Name" required/>
-            <br>
-            <input type="text" name="person[student_num]" class="form-control black-input"  placeholder="Student Number">
+            <input type="text" name="person[last_name]" class="form-control black-input" placeholder="Last name" required>
             <br>
             <input type="text" name="user[name]" id="user_name" class="form-control black-input" placeholder="Username" required/>
             <br>
@@ -27,14 +27,26 @@
             <br>
             <input type="password" name="user[password_confirmation]" id="user_password_confirmation" class="form-control black-input" placeholder="Confirm Password" required/>
             <br>
-            <label for="is_student">Student</label>
-            <input type="radio" name="is_student">
-            <label for="is_moderator">Moderator</label>
-            <input type="radio" name="is_moderator">
-            <br><br>
+            <div class="switch">
+              <input name="user_type" type="radio" value="student" id="student" checked>
+              <label for="student">Student</label>
+              
+              <input name="user_type" type="radio" value="moderator" id="moderator">
+              <label for="moderator" class="right">Moderator</label>
+              
+              <span aria-hidden="true"></span>
+            </div>
+            <br>
+            <br>
+            <input type="text" name="person[student_num]" class="form-control black-input student-number" placeholder="Student number">
+            <br>
+            <br>
             <input class="btn btn-black" type="submit" name="commit" value="Sign Up" data-disable-with="Submit" />
+            <br>
+            <!-- <input class="btn btn&#45;black" type="submit" name="commit" value="Sign Up" data&#45;disable&#45;with="Submit" /> -->
         </div>
-        <% end %>
+
+          <% end %>
 
         <div class="col-md-12">
           <br>
