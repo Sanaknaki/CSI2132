@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   end
 
   def create
+    params[:user][:name] = params[:user][:name].downcase
+    params[:user][:email] = params[:user][:email].downcase
     @user = User.new(user_params)
     if params[:user_type] == 'student'
       @student = Student.create(student_params)
