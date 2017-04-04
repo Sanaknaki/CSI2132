@@ -27,23 +27,19 @@
             <br>
             <input type="password" name="user[password_confirmation]" id="user_password_confirmation" class="form-control black-input" placeholder="Confirm Password" required/>
             <br>
-            <input type="text" name="person[student_num]" class="form-control black-input" placeholder="Student number">
-            <br>
-            <!-- <label for="is_student">Student</label> -->
-            <!-- <input type="radio" name="user" value="student"> -->
-            <!-- <label for="is_moderator">Moderator</label> -->
-            <!-- <input type="radio" name="user" value="moderator"> -->
             <div class="switch">
-              <input name="user_type" type="radio" value="student" id="optionone" checked>
-              <label for="optionone">Student</label>
+              <input name="user_type" type="radio" value="student" id="student" checked>
+              <label for="student">Student</label>
               
-              <input name="user_type" type="radio" value="moderator" id="optiontwo">
-              <label for="optiontwo" class="right">Moderator</label>
+              <input name="user_type" type="radio" value="moderator" id="moderator">
+              <label for="moderator" class="right">Moderator</label>
               
               <span aria-hidden="true"></span>
             </div>
             <br>
-            
+            <br>
+            <input type="text" name="person[student_num]" class="form-control black-input student-number" placeholder="Student number">
+            <br>
             <br>
             <input class="btn btn-black" type="submit" name="commit" value="Sign Up" data-disable-with="Submit" />
             <br>

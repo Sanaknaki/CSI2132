@@ -11,6 +11,15 @@ var Switch = function(){
       $(indicator).removeClass('right');
     }
   });
+  $('input[type="radio"][name="user_type"]').change(
+    function() {
+      if ( document.getElementById('student').checked ){
+        $('.student-number').show()
+      }else{
+        $('.student-number').hide()
+      }
+    }
+  )
 }
 $(document).on('turbolinks:load', function() {
   Switch();
