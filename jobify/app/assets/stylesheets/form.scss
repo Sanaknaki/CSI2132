@@ -20,7 +20,7 @@ $white: #ffffff;
   text-align: center;
   background-color: $switchbg;
   width: 100%;
-  display: inline-table;
+  display: inline-block;
   border-radius: 8px;
   height: 40px;
   padding: 5px;
@@ -65,5 +65,8 @@ $white: #ffffff;
       border-radius: 0 5px 5px 0;
       transition: all 200ms ease;
     }
+  }
+  label {
+      line-height: 220%
   }
 }
