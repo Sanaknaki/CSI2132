@@ -1,6 +1,6 @@
 # Resume controller
 class ResumesController < ApplicationController
-  layout 'index_layout'
+  # layout 'index_layout'
   before_filter :authorize
   def create
     # TODO add it to the database
