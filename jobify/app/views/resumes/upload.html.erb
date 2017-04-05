@@ -1,4 +1,6 @@
-<%= form_tag( {:action => "upload"},:multipart => true) do |f| %>
-  <%= file_field_tag :resume_pdf %>
-  <%= submit_tag %>
-<% end %>
+<div class="col-md-2 col-md-offset-5" style="text-align: center;">
+  <%= form_tag( {:action => "upload"},:multipart => true) do |f| %>
+    <%= file_field_tag :resume_pdf %>
+    <%= submit_tag %>
+  <% end %>
+</div>
