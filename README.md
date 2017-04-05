@@ -35,5 +35,7 @@ rails s
 
 - Screenshots
 
-![Alt text](/screenshots/login.png "Login Screen")
+![Alt text](https://raw.githubusercontent.com/Abdulwahaab710/CSI2132/master/screenshots/Login.png)
+![Alt text](https://raw.githubusercontent.com/Abdulwahaab710/CSI2132/master/screenshots/signup.png)
+
 
