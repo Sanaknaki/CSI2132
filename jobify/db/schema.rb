@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170402042342) do
+ActiveRecord::Schema.define(version: 20170406004646) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "ctext"
@@ -32,9 +32,11 @@ ActiveRecord::Schema.define(version: 20170402042342) do
     t.string   "sector"
     t.string   "rating"
     t.string   "website"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "colour"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "commment_id"
+    t.index ["commment_id"], name: "index_companies_on_commment_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -102,6 +104,24 @@ ActiveRecord::Schema.define(version: 20170402042342) do
     t.index ["resume_id"], name: "index_resume_comments_on_resume_id"
   end
 
+  create_table "resumes", force: :cascade do |t|
+    t.string   "resume_path"
+    t.integer  "version"
+    t.integer  "student_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "comment_id"
+    t.index ["comment_id"], name: "index_resumes_on_comment_id"
+    t.index ["student_id"], name: "index_resumes_on_student_id"
+  end
+
+  create_table "sessions", force: :cascade do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_sessions_on_user_id"
+  end
+
   create_table "students", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -111,16 +131,6 @@ ActiveRecord::Schema.define(version: 20170402042342) do
     t.datetime "updated_at",  null: false
     t.index ["user_id"], name: "index_students_on_user_id"
   end
-
-  create_table "resumes", force: :cascade do |t|
-    t.string   "resume_path"
-    t.integer  "version"
-    t.integer  "student_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["student_id"], name: "index_resumes_on_student_id"
-  end
-
 
   create_table "universities", force: :cascade do |t|
     t.string   "name"
