@@ -1,5 +1,22 @@
-<ul>
-  <% @resumes.each do |resume| %>
-    <li>Version <%=resume.version %>: <a href="<%= resume.resume_path %>"><%= resume.created_at %></a> <a href="/student/<%= resume.student_id %>/resumes/<%= resume.id %>">View reviews</a></li>
-  <% end %>
-</ul>
+<style>
+  li.resume-list{
+    font-size: 20px;
+  }
+  a.view-resume, a.open-resume{
+    background-color: rgb(75, 75, 75);
+    padding: 4px 6px;
+    border-radius: 2px;
+    color: white !important;
+  }
+</style>
+<div class="col-md-12">
+  <ul>
+    <% @resumes.each do |resume| %>
+      <li class="resume-list">
+        Version <%=resume.version %>: <%= resume.created_at %> 
+      <a href="/student/<%= resume.student_id %>/resumes/<%= resume.id %>" class="view-resume">View reviews</a>
+      <a href="<%= resume.resume_path %>" class="open-resume">Open resume</a>
+    </li>
+    <% end %>
+  </ul>
+</div>

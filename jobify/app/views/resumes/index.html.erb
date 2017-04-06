@@ -1,5 +1,7 @@
-<ul>
-  <% @resume.each do |resume| %>
-    <li><a href="/student/<%= @student.id %>/resumes/<%= resume.id %>"><%= resume.resume_path %></a></li>
-  <% end %>
-</ul>
+<div class="col-md-4 col-md-offset-4">
+  <ul>
+    <% @resume.each do |resume| %>
+      <li><a href="/student/<%= @student.id %>/resumes/<%= resume.id %>"> <%= resume.resume_path %></a></li>
+    <% end %>
+  </ul>
+</div>

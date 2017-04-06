@@ -1,5 +1,6 @@
-<%= form_for :student, url: '/find-student' do |f| %>
-  <input type="textarea" placeholder="Student number" name="student[number]"/>
-  <button type="submit">Submit</button>
-<% end %>
-
+<div class="col-md-4 col-md-offset-4">
+  <%= form_for :student, url: '/find-student' do |f| %>
+    <input type="textarea" placeholder="Student number" name="student[number]"/>
+    <button type="submit">Submit</button>
+  <% end %>
+</div>
