@@ -26,18 +26,15 @@ class ResumesController < ApplicationController
   end
 
   def resume_review
+    raise ApplicationController::NotAuthorized if User.find_by_id(session[:user_id]).student
     render 'find_student'
   end
 
   def find_student
+    render :status => :forbidden if User.find_by_id(session[:user_id]).student
     @student = Student.find_by_id(params[:student][:number])
     @resume = @student.resume
     render 'index'
-  end
-
-  def index
-    @resumes = Resume.all
-    render('index')
   end
 
   def upload
@@ -45,6 +42,7 @@ class ResumesController < ApplicationController
   end
 
   def fetch_student_resume_by_id
+    render :status => :forbidden if User.find_by_id(session[:user_id]).student
     @resume = Resume.find(params[:rid])
     @comments = @resume.resume_comment
     render 'resume'
