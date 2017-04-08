@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import datetime
 import sqlite3
 
-conn = sqlite3.connect('../CSI2132/jobify/db/development.sqlite3')
+conn = sqlite3.connect('../jobify/db/development.sqlite3')
 cur = conn.cursor()
 
 #search api for engineeing companies(id,name,sector,rating,website,created_at,updated_at)
@@ -21,10 +21,11 @@ for i in range(len(json.loads(str(soup))["response"]["employers"])):
         sector = str(json.loads(str(soup))["response"]["employers"][i]["sectorName"])
         website = str(json.loads(str(soup))["response"]["employers"][i]["website"] )
         rating = str(json.loads(str(soup))["response"]["employers"][i]["overallRating"])
+        colour = "#e5e5e5"
         created_at = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         updated_at = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         company_id = str(i+1)
-        cur.execute("INSERT INTO companies VALUES("   +"'"+company_id+"',"   +"'"+name+"',"   +"'"+sector+"',"    +"'"+rating+"',"    +"'"+website+"',"    +"'"+created_at+"',"    +"'"+updated_at+"'"        +")")
+        cur.execute("INSERT INTO companies VALUES("   +"'"+company_id+"',"   +"'"+name+"',"   +"'"+sector+"',"    +"'"+rating+"',"    +"'"+website+"',"  +"'"+colour+"',"   +"'"+created_at+"',"    +"'"+updated_at+"'"        +")")
     except:
         print "----^-----insertion-is-no-go----^-----"
 
