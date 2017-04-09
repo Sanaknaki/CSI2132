@@ -18,10 +18,11 @@ Rails.application.routes.draw do
   # Company
   get '/companies' => 'companies#index'
   get '/companies/:id' => 'companies#fetch_company', :as => :company
+  get '/companies/:c_id/jobs/:id' => 'jobs#fetch_jobs_for_company'
   # Comment
   post '/companies/:id/comment' => 'comments#add_company_comment'
-  post '/jobs/:id/comment' => 'comments#add_job_comment'
   post '/students/:id/resume/:rid/comment' => 'comments#add_resume_comment'
+  post '/companies/:c_id/jobs/:id' => 'comments#add_job_comment'
   # job
   get '/jobs' => 'jobs#index'
   get '/jobs/:id' => 'jobs#fetch_job_by_id', :as => :job
