@@ -1,6 +1,8 @@
+<%= javascript_include_tag "application", media: "all" %>
 <div class="col-md-4 col-md-offset-4">
   <%= form_for :student, url: '/find-student' do |f| %>
-    <input type="textarea" placeholder="Student number" name="student[number]"/>
+    <input type="textarea" placeholder="Student number" name="student"/>
+    <% autocomplete_field_tag 'student', '', autocomplete_student_info_students_path, :size => 75 %>
     <button type="submit">Submit</button>
   <% end %>
 </div>

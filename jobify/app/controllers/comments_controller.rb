@@ -22,13 +22,11 @@ class CommentsController < ApplicationController
   end
 
   def add_job_comment
-    @job = Job.find(params[:job_id])
-    @job = @job.comments.create(comment_params)
-    if @comment.save
-      redirect_to @job
-    else
-      flash.now[:danger] = 'error'
-    end
+    @job = Job.find(params[:id])
+    @job = @job.job_comment.create(
+      :comment => params[:comment][:comment]
+    )
+    redirect_to "/companies/#{params[:c_id]}/jobs/#{params[:id]}"
   end
 
   def add_resume_comment

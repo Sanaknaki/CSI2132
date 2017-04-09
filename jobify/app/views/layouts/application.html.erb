@@ -33,14 +33,14 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/companies">COMPANIES</a></li>
 
-          <% if User.find_by_id(session[:user_id]).student %>
+          <% if User.find_by_id(session[:user_id]) && User.find_by_id(session[:user_id]).student %>
             <li><a href="/resumes">UPLOAD RESUME</a></li>
             <li><a href="/student/<%= session[:user_id] %>/resumes">MY RESUME</a></li>
           <% else %>
             <li><a href="/review-resumes">REVIEW RESUMES</a></li>
           <% end %>
           <li>
-            <%= button_to "LOGOUT", logout_path , method: 'delete', style: "border: none !important; background: none !important; " %>
+            <%= button_to "LOGOUT", logout_path , method: 'delete', style: "border: none !important; background: none !important; padding-top: 15px;" %>
           </li>
         </ul>
       </div>
