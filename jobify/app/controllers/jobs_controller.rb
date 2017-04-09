@@ -16,6 +16,7 @@ class JobsController < ApplicationController
   def companies_jobs; end
 
   def fetch_jobs_for_company
-    @jobs = Company.find_by_id(params[:c_id]).job
+    @job = Company.find_by_id(params[:c_id]).job.find(params[:id])
+    render 'job_details'
   end
 end
