@@ -27,6 +27,7 @@ class ResumesController < ApplicationController
 
   def resume_review
     raise ApplicationController::NotAuthorized if User.find_by_id(session[:user_id]).student
+    @students = Student.all
     render 'find_student'
   end
 
