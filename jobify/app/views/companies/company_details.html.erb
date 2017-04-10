@@ -60,11 +60,13 @@
         <div class= "col-md-2"></div>
         <div class="col-md-5 text-center">
 
-          <%= form_for :comment, url: '/companies/'+@company.id.to_s+'/comment' do |f| %>
-            <textarea  placeholder="Enter your comment!" name="comment[ctext]" required=""/></textarea>
-            <br>
-            <button class="btn btn-black"  type="submit">Submit</button>
-          <% end %>
+          <%# <%= if %>
+            <%= form_for :comment, url: '/companies/'+@company.id.to_s+'/comment' do |f| %>
+              <textarea  placeholder="Enter your comment!" name="comment[ctext]" required=""/></textarea>
+              <br>
+              <button class="btn btn-black"  type="submit">Submit</button>
+            <% end %>
+          <%# <% end %>
 
         <% @comments.each do |comment| %>
           <div class="panel panel-default">
