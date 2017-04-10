@@ -21,6 +21,10 @@
             <br>
             <input type="text" name="user[name]" id="user_name" class="form-control black-input" placeholder="Username" required/>
             <br>
+            <input type="text" name="user[program]" id="user_program" class="form-control black-input" placeholder="Porgram" required/>
+            <br>
+            <input type="number" name="user[level]" id="user_level" class="form-control black-input" placeholder="Level" required/>
+            <br>
             <input type="email" name="user[email]" id="user_email" class="form-control black-input" placeholder="Email" data-error="Bruh, that email address is invalid" required/>
             <br>
             <input type="password" name="user[password]" id="user_password" class="form-control black-input" placeholder="Password" required/>
@@ -30,10 +34,10 @@
             <div class="switch">
               <input name="user_type" type="radio" value="student" id="student" checked>
               <label for="student">Student</label>
-              
+
               <input name="user_type" type="radio" value="moderator" id="moderator">
               <label for="moderator" class="right">Moderator</label>
-              
+
               <span aria-hidden="true"></span>
             </div>
             <br>
