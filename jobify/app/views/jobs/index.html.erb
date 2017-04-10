@@ -23,20 +23,20 @@
         </div>
         <% @jobs.each do |job| %>
           <div class="col-md-6">
-            <a style="color : black;" title="<%= job.name %>" href='/jobs/<%= job.id %>'>
-              <div class="panel panel-default" style="background : url('/bg/<%= job.name %>_bg.png'); /*background-position : bottom; background-repeat : no-repeat; background-size : 100% 5px;*/">
+            <a style="color : black;" title="<%= job.job_description %>" href='/jobs/<%= job.id %>'>
+              <div class="panel panel-default" style="background : url('/bg/<%= job.job_description %>_bg.png'); /*background-position : bottom; background-repeat : no-repeat; background-size : 100% 5px;*/">
                 <div class="panel-body">
-                  <img draggable="false" height="50" width="50" src="/icon_w/<%= job.name %>_icon_W.png">
-                  <h1 style="text-transform: uppercase; color : white;"><%= job.name %></h1>
-                  <!--<h4><%= job.rating %></h4>-->
+                  <img draggable="false" height="50" width="50" src="/icon_w/<%= job.job_description %>_icon_W.png">
+                  <h1 style="text-transform: uppercase; color : white;"><%= job.job_description %></h1>
+                  <!--<h4><%#= job.rating %></h4>-->
 
                 </div>
               </div>
             </a>
-            <!--<a href='/jobs/<%= job.id %>'>
+            <!--<a href='/jobs/<%#= job.id %>'>
               <div class="well">
-                <h1 style="text-transform: uppercase;"><%= job.name %></h1>
-                <h4><%= job.rating %></h4>
+                <h1 style="text-transform: uppercase;"><%#= job.job_description %></h1>
+                <h4><%#= job.rating %></h4>
               </div>
             </a>-->
           </div>
