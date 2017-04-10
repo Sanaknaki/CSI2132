@@ -113,7 +113,6 @@ ul.images li { display: inline !important; width: 150px !important; height: 150p
  .btn-black { background: none !important; border-width : 2px !important; border-color : black !important; color: #000000; }
  .btn-black:hover, .btn-black:focus, .btn-black:active, .btn-black.active, .open > .dropdown-toggle.btn-primary
  { background: none; border-width : 2px !important; border-color : black !important; }
- ul.nav li:hover{
-     font-weight: bold;
-     border-bottom: 2px black solid;
- }
+
+/* Nav Link Modifications : Now it's prettier */
+ ul.nav li:hover{ border-bottom: 2px black solid; }
