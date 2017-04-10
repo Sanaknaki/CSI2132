@@ -24,9 +24,9 @@
         <% @jobs.each do |job| %>
           <div class="col-md-6">
             <a style="color : black;" title="<%= job.job_description %>" href='/jobs/<%= job.id %>'>
-              <div class="panel panel-default" style="background : url('/bg/<%= job.job_description %>_bg.png'); /*background-position : bottom; background-repeat : no-repeat; background-size : 100% 5px;*/">
+              <div class="panel panel-default" style="background : url('/bg/<%= job.company.name %>_bg.png'); /*background-position : bottom; background-repeat : no-repeat; background-size : 100% 5px;*/">
                 <div class="panel-body">
-                  <img draggable="false" height="50" width="50" src="/icon_w/<%= job.job_description %>_icon_W.png">
+                  <img draggable="false" height="50" width="50" src="/icon_w/<%= job.company.name %>_icon_W.png">
                   <h1 style="text-transform: uppercase; color : white;"><%= job.job_description %></h1>
                   <!--<h4><%#= job.rating %></h4>-->
 
