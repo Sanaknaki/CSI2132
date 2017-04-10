@@ -65,7 +65,7 @@
           <%= form_for :company_rating, url: '/companies/'+@company.id.to_s+'/rating' do |f| %>
             <input class = "comprating" id ="updatenum" type="text" name="company_rating[rating]" value="0">
             <br><br>
-            <button class="btn btn-black"  type="submit">Submit</button>
+            <button class="btn btn-black"  type="submit">Submit Rating</button>
           <% end %>
           <%= form_for :comment, url: '/companies/'+@company.id.to_s+'/comment' do |f| %>
             <textarea  placeholder="Enter your comment!" name="comment[ctext]" required=""/></textarea>
