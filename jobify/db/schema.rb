@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20170410155638) do
     t.integer  "job_id"
     t.integer  "resume_id"
     t.integer  "company_id"
-    t.         "student"
     t.index ["company_id"], name: "index_comments_on_company_id"
     t.index ["job_id"], name: "index_comments_on_job_id"
     t.index ["resume_id"], name: "index_comments_on_resume_id"
@@ -75,7 +74,6 @@ ActiveRecord::Schema.define(version: 20170410155638) do
     t.string   "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.         "student"
     t.index ["job_id"], name: "index_job_comments_on_job_id"
   end
 

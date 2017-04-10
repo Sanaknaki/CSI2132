@@ -39,6 +39,12 @@ a, a:link, a:visited, a:active, a:hover { text-decoration : none !important; col
 /* Aligning text in a section */
  .header-container { text-align : center; }
 
+/* Input line changes */
+input { cursor: ew-resize; }
+
+/* Company rating input changes */
+.comprating { border : none !important; font-size: 25px; border-color: none !important; outline-width: 0 !important; text-align: center !important;}
+
 /* ==================== ANY BOOTSTRAP MODIFICATIONS ARE DONE BELOW ==================== */
 
 /* Textarea Modifivations : Designing */
