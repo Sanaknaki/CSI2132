@@ -68,7 +68,6 @@
             <br>
             <button class="btn btn-black"  type="submit">Submit</button>
           <% end %>
-
         <% @comments.each do |comment| %>
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -84,6 +83,7 @@
               </div>
             </div>
             <div class="panel-body"><%= comment.ctext %> upvotes => <%= CompanyCommentUpvote.where(comment_id: comment.id).count %></div>
+            <div class="panel-body"><%= comment.ctext %></div>
           </div>
         <% end %>
         </div>

@@ -1,8 +1,28 @@
-<%= javascript_include_tag "application", media: "all" %>
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" media="all">
+<script src='//code.jquery.com/jquery-1.12.4.js'></script>
 <div class="col-md-4 col-md-offset-4">
-  <%= form_for :student, url: '/find-student' do |f| %>
-    <input type="textarea" placeholder="Student number" name="student"/>
-    <% autocomplete_field_tag 'student', '', autocomplete_student_info_students_path, :size => 75 %>
-    <button type="submit">Submit</button>
-  <% end %>
+  <table id='myTable' class="display" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Resume page</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @students.each do |student| %>
+        <tr>
+          <td><%= student.first_name %></td>
+          <td><%= student.last_name %></td>
+          <td><a href="/students/<%= student.user.id %>/resumes/">View resumes</a></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#myTable').DataTable();
+  });
+</script>
