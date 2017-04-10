@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_one :student
   has_one :moderator
   has_many :session
+  has_many :compnay_comment_upvote
 end
