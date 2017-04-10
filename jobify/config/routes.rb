@@ -1,6 +1,7 @@
 # Rails routes
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # For details on the DSL available within this file,
+  # see http://guides.rubyonrails.org/routing.html
   # Pages
   root 'pages#home'
   get '/', to: 'pages#home'
@@ -34,12 +35,17 @@ Rails.application.routes.draw do
   # uploads
   get '/resumes' => 'resumes#upload'
   post '/resumes' => 'resumes#create'
+  #Comments
   get '/review-resumes' => 'resumes#resume_review'
   post '/find-student' => 'resumes#find_student'
   get '/student/:id/resumes/:rid' => 'resumes#fetch_student_resume_by_id'
+  get '/student/resumes/:rid' => 'resumes#fetch_student_resume_by_id'
   post '/student/:id/resumes/:rid' => 'comments#add_resume_comment'
   # student resumes
   get '/student/:id/resumes/' => 'students#fetch_student_resumes'
+  get '/student/resumes' => 'students#fetch_my_resume'
+  # rating
+  post '/companies/:id/rating' => 'company_ratings#add_company_rating'
   resources :students do
     get :autocomplete_student_info, on: :collection
   end
