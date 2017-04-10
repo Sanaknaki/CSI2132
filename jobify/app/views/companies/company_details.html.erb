@@ -63,7 +63,7 @@
           <span id="sliderChange" style="font-size: 120px; height: 100px; line-height: 170px;">💀</span>
           <input type="range" onChange="updateSlider();" value="0" id="slide" name="mySlider" min="0" max="5"/>
           <%= form_for :company_rating, url: '/companies/'+@company.id.to_s+'/rating' do |f| %>
-            <input class = "comprating" id ="updatenum" type="text" name="company_rating[rating]" value="">
+            <input class = "comprating" id ="updatenum" type="text" name="company_rating[rating]" value="0">
             <br><br>
             <button class="btn btn-black"  type="submit">Submit</button>
           <% end %>
