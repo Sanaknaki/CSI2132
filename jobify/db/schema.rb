@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410155638) do
+ActiveRecord::Schema.define(version: 20170410162737) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "ctext"
@@ -38,6 +38,15 @@ ActiveRecord::Schema.define(version: 20170410155638) do
     t.string   "colour"
     t.integer  "commment_id"
     t.index ["commment_id"], name: "index_companies_on_commment_id"
+  end
+
+  create_table "company_comment_upvotes", force: :cascade do |t|
+    t.integer  "student_id"
+    t.integer  "comment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["comment_id"], name: "index_company_comment_upvotes_on_comment_id"
+    t.index ["student_id"], name: "index_company_comment_upvotes_on_student_id"
   end
 
   create_table "company_ratings", force: :cascade do |t|
