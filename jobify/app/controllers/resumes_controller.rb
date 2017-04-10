@@ -49,6 +49,12 @@ class ResumesController < ApplicationController
     render 'resume'
   end
 
+  def fetch_my_resume_by_id
+    @resume = Resume.find(params[:rid])
+    @comments = @resume.resume_comment
+    render 'resume'
+  end
+
   private
 
   # Use strong_parameters for attribute whitelisting

@@ -14,7 +14,12 @@
     <% @resumes.each do |resume| %>
       <li class="resume-list">
         Version <%=resume.version %>: <%= resume.created_at %> 
-      <a href="/student/<%= resume.student.user.id %>/resumes/<%= resume.id %>" class="view-resume">View reviews</a>
+      <% if User.find(session[:user_id]).student %>
+        <% link = "/student/resumes/#{resume.id}" %>
+      <% else %>
+        <% link = "/student/#{@student.id}/resumes/#{resume.id}" %>
+      <% end %>
+      <a href="<%= link %>" class="view-resume">View reviews</a>
       <a href="/<%= resume.resume_path %>" class="open-resume">Open resume</a>
     </li>
     <% end %>
