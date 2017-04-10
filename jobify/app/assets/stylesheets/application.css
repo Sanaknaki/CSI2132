@@ -39,6 +39,12 @@ a, a:link, a:visited, a:active, a:hover { text-decoration : none !important; col
 /* Aligning text in a section */
  .header-container { text-align : center; }
 
+/* Input line changes */
+input { cursor: ew-resize; }
+
+/* Company rating input changes */
+.comprating { border : none !important; font-size: 25px; border-color: none !important; outline-width: 0 !important; text-align: center !important;}
+
 /* ==================== ANY BOOTSTRAP MODIFICATIONS ARE DONE BELOW ==================== */
 
 /* Textarea Modifivations : Designing */
@@ -113,7 +119,6 @@ ul.images li { display: inline !important; width: 150px !important; height: 150p
  .btn-black { background: none !important; border-width : 2px !important; border-color : black !important; color: #000000; }
  .btn-black:hover, .btn-black:focus, .btn-black:active, .btn-black.active, .open > .dropdown-toggle.btn-primary
  { background: none; border-width : 2px !important; border-color : black !important; }
- ul.nav li:hover{
-     font-weight: bold;
-     border-bottom: 2px black solid;
- }
+
+/* Nav Link Modifications : Now it's prettier */
+ ul.nav li:hover{ border-bottom: 2px black solid; }

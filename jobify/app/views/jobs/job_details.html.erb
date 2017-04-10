@@ -1,21 +1,36 @@
-<b>Company:</b> <%= @job.company.name %> <br>
-<b>Position:</b> <%= @job.job_description %> <br>
-<b>Level:</b> <%= @job.ranking %> <br>
-<b>Pay:</b> <%= @job.level_direct_to %> <br>
+<div class = "col-md-4 col-md-offset-4 text-center">
+  <h1><%= @job.company.name %> </h1>
+  <b>Job Title:</b> <%= @job.job_description %> <br>
+  <b>Level Required :</b> <%= @job.ranking %> <br>
+  <h2>Comments</h2>
+</div>
 
+<div class = "col-md-6 col-md-offset-3 text-center">
+  <%= form_for :comment, url: "/companies/#{@job.company_id}/jobs/#{@job.id}" do |f| %>
+    <textarea style = "border-color: #<%= @job.company.colour %> !important;" placeholder="Enter your comment!" type="text" name="comment[comment]" id="comment_comment"></textarea>
+    <br><br>
+    <input class="btn btn-black" type="submit" name="commit" value="Submit comment" data-disable-with="Submit comment">
+    <br><br>
+    <hr/>
+  <% end %>
+</div>
 
-<hr>
-<h2>Comments</h2>
-
-<ul>
   <% unless @job.job_comment.length > 0 %>
+  <div class = "col-md-4 col-md-offset-4 text-center">
     <h3> No comments available </h3>
+  </div>
   <% end %>
   <% @job.job_comment.each do |comment| %>
-    <li><%= comment.comment %> <%= comment.created_at %></li>
+    <div class = "col-md-4 col-md-offset-4">
+      <div style = "border-color: #<%= @job.company.colour %> !important;" class="panel panel-default">
+        <div style = "border-color: #<%= @job.company.colour %> !important;" class="panel-heading">
+          <div class = "row">
+            <h3 class="panel-title text-center">Comment</h3>
+          </div>
+        </div>
+
+        <div class="panel-body"><%= comment.comment %></div>
+
+      </div>
+    </div>
   <% end %>
-</ul>
-<%= form_for :comment, url: "/companies/#{@job.company_id}/jobs/#{@job.id}" do |f| %>
-  <%= f.text_field :comment %> <br>
-  <%= f.submit "Submit comment" %>
-<% end %>

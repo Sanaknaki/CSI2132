@@ -9,8 +9,9 @@
   <%= stylesheet_link_tag "application", media: "all" %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <%= javascript_include_tag "emoji", media: "all" %>
 </head>
 
 <body>
@@ -59,9 +60,12 @@
 
         <div class= "col-md-2"></div>
         <div class="col-md-5 text-center">
+          <span id="sliderChange" style="font-size: 120px; height: 100px; line-height: 170px;">💀</span>
+          <input type="range" onChange="updateSlider();" value="0" id="slide" name="mySlider" min="0" max="5"/>
           <%= form_for :company_rating, url: '/companies/'+@company.id.to_s+'/rating' do |f| %>
-              <input type="text" name="company_rating[rating]" value="">
-            <button type="submit" name="button">Submit</button>
+            <input class = "comprating" id ="updatenum" type="text" name="company_rating[rating]" value="0">
+            <br><br>
+            <button class="btn btn-black"  type="submit">Submit</button>
           <% end %>
           <%= form_for :comment, url: '/companies/'+@company.id.to_s+'/comment' do |f| %>
             <textarea  placeholder="Enter your comment!" name="comment[ctext]" required=""/></textarea>
@@ -73,6 +77,7 @@
             <div class="panel-heading">
               <div class = "row">
                 <h3 class="panel-title text-center">Comment</h3>
+                <i class="fa fa-smile-o" aria-hidden="true"></i> <%= CompanyCommentUpvote.where(comment_id: comment.id).count %>
                 <% c = CompanyCommentUpvote.where("student_id = #{User.find(session[:user_id]).student.id} and comment_id = #{comment.id}").count %>
                 <% unless c > 0 %>
                   <%= form_for :company_comment_upvote, url: '/companies/'+@company.id.to_s+'/company_comment_upvotes' do |f| %>
@@ -82,7 +87,6 @@
                 <% end %>
               </div>
             </div>
-            <div class="panel-body"><%= comment.ctext %> upvotes => <%= CompanyCommentUpvote.where(comment_id: comment.id).count %></div>
             <div class="panel-body"><%= comment.ctext %></div>
           </div>
         <% end %>
@@ -92,3 +96,4 @@
   </div>
 
 </body>
+</html>
