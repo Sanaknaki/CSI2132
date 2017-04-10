@@ -40,6 +40,8 @@ Rails.application.routes.draw do
   post '/student/:id/resumes/:rid' => 'comments#add_resume_comment'
   # student resumes
   get '/student/:id/resumes/' => 'students#fetch_student_resumes'
+  # rating
+  post '/companies/:id/rating' => 'company_ratings#add_company_rating'
   resources :students do
     get :autocomplete_student_info, on: :collection
   end
