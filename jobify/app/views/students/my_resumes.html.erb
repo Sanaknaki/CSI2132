@@ -14,8 +14,8 @@
     <% @resumes.each do |resume| %>
       <li class="resume-list">
         Version <%=resume.version %>: <%= resume.created_at %> 
-      <a href="/student/<%= resume.student_id %>/resumes/<%= resume.id %>" class="view-resume">View reviews</a>
-      <a href="<%= resume.resume_path %>" class="open-resume">Open resume</a>
+      <a href="/student/<%= resume.student.user.id %>/resumes/<%= resume.id %>" class="view-resume">View reviews</a>
+      <a href="/<%= resume.resume_path %>" class="open-resume">Open resume</a>
     </li>
     <% end %>
   </ul>
