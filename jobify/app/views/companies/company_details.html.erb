@@ -78,25 +78,21 @@
               <div class = "row">
                 <h3 class="panel-title text-center">Comment</h3>
                 <i class="fa fa-smile-o" aria-hidden="true"></i> <%= CompanyCommentUpvote.where(comment_id: comment.id).count %>
-                <% if User.find(session[:user_id]).student %>
-                  <% c = CompanyCommentUpvote.where("student_id = #{User.find(session[:user_id]).student.id} and comment_id = #{comment.id}").count %>
-                <% else %>
-                  <% c = CompanyCommentUpvote.where("student_id = #{User.find(session[:user_id]).moderator.id} and comment_id = #{comment.id}").count %>
-                <% end %>
-                <% unless c > 0 %>
-                  <%= form_for :company_comment_upvote, url: '/companies/'+@company.id.to_s+'/company_comment_upvotes' do |f| %>
-                    <input type="hidden" name="comment_id" value="<%= comment.id %>">
-                    <button class="btn btn-black"  type="submit">upvote</button>
-                  <%end %>
-                <% end %>
-              </div>
+              <% c = CompanyCommentUpvote.where("student_id = #{session[:user_id]} and comment_id = #{comment.id}").count %>
+              <% unless c > 0 %>
+                <%= form_for :company_comment_upvote, url: '/companies/'+@company.id.to_s+'/company_comment_upvotes' do |f| %>
+                  <input type="hidden" name="comment_id" value="<%= comment.id %>">
+                  <button class="btn btn-black"  type="submit">upvote</button>
+                <%end %>
+              <% end %>
             </div>
-            <div class="panel-body"><%= comment.ctext %></div>
           </div>
-        <% end %>
+          <div class="panel-body"><%= comment.ctext %></div>
         </div>
+      <% end %>
       </div>
     </div>
   </div>
+</div>
 </body>
 </html>
