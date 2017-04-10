@@ -5,7 +5,8 @@ class StudentsController < ApplicationController
 
   def fetch_student_resumes
     raise ApplicationController::NotAuthorized if User.find_by_id(session[:user_id]).student
-    @resumes = User.find_by_id(params[:id]).student.resume
+    @student = User.find_by_id(params[:id])
+    @resumes = @student.student.resume
     render 'my_resumes'
   end
 
