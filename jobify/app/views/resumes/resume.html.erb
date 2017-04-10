@@ -1,18 +1,27 @@
-<% if User.find_by_id(session[:user_id]).student %>
-  <a href="/student/resumes/">&lt; Back</a>
-<% else %>
-  <a href="/student/<%= @resume.student_id %>/resumes/">&lt; Back</a>
-<% end %>
-<br>
-<%= @resume.created_at %>
-<ul>
+<div class = "col-md-6 col-md-offset-3 text-center">
+  <b>Resume for </b>:
+  <%= @resume.student.first_name %>
+  <%= @resume.student.last_name %>
+  <br>
+  <b>Version</b> : <%= @resume.version %>
+  <% if User.find_by_id(session[:user_id]).moderator %>
+    <%= form_for :comment, url: '/student/'+@resume.student_id.to_s+'/resumes/'+@resume.id.to_s do |f| %>
+      <textarea placeholder="Enter your comment!" name="comment[ctext]"></textarea>
+      <br><br>
+      <button class = "btn btn-black" type="submit">Submit</button>
+      <br>
+      <hr/>
+    <% end %>
+  <% end %>
+
   <% @comments.each do |comment| %>
-    <li><%= comment.ctext %></li>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class = "row">
+        <h3 class="panel-title text-center">Comment</h3>
+      </div>
+    </div>
+    <div class="panel-body"><%= comment.ctext %></div>
+  </div>
   <% end %>
-</ul>
-<% if User.find_by_id(session[:user_id]).moderator %>
-  <%= form_for :comment, url: '/student/'+@resume.student_id.to_s+'/resumes/'+@resume.id.to_s do |f| %>
-    <input type="textarea" placeholder="comment" name="comment[ctext]"/>
-    <button type="submit">Submit</button>
-  <% end %>
-<% end %>
+</div>
