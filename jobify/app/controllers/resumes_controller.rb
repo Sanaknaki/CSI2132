@@ -31,8 +31,8 @@ class ResumesController < ApplicationController
   end
 
   def find_student
-    render :status => :forbidden if User.find_by_id(session[:user_id]).student
-    @student = Student.find_by_id(params[:student][:number])
+    raise ApplicationController::NotAuthorized if User.find_by_id(session[:user_id]).student
+    @student = User.find_by_id(params[:student]).student
     @resume = @student.resume
     render 'index'
   end
@@ -42,7 +42,7 @@ class ResumesController < ApplicationController
   end
 
   def fetch_student_resume_by_id
-    render :status => :forbidden if User.find_by_id(session[:user_id]).student
+    raise ApplicationController::NotAuthorized if User.find_by_id(session[:user_id]).student
     @resume = Resume.find(params[:rid])
     @comments = @resume.resume_comment
     render 'resume'
