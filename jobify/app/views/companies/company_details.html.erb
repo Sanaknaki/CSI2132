@@ -74,10 +74,16 @@
             <div class="panel-heading">
               <div class = "row">
                 <h3 class="panel-title text-center">Comment</h3>
+                <% c = CompanyCommentUpvote.where("student_id = #{User.find(session[:user_id]).student.id} and comment_id = #{comment.id}").count %>
+                <% unless c > 0 %>
+                  <%= form_for :company_comment_upvote, url: '/companies/'+@company.id.to_s+'/company_comment_upvotes' do |f| %>
+                    <input type="hidden" name="comment_id" value="<%= comment.id %>">
+                    <button class="btn btn-black"  type="submit">upvote</button>
+                  <%end %>
+                <% end %>
+              </div>
             </div>
-            </div>
-            <div class="panel-body"><%= comment.ctext %></div>
-
+            <div class="panel-body"><%= comment.ctext %> upvotes => <%= CompanyCommentUpvote.where(comment_id: comment.id).count %></div>
           </div>
         <% end %>
         </div>

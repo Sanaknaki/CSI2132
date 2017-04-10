@@ -1,0 +1,2 @@
+module CompanyCommentUpvoteHelper
+end

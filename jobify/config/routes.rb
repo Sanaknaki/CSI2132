@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   post '/companies/:id/comment' => 'comments#add_company_comment'
   post '/students/:id/resume/:rid/comment' => 'comments#add_resume_comment'
   post '/companies/:c_id/jobs/:id' => 'comments#add_job_comment'
+  # Upvote
+  post '/companies/:id/company_comment_upvotes' => 'company_comment_upvote#add_company_comment_upvote'
   # job
   get '/jobs' => 'jobs#index'
   get '/jobs/:id' => 'jobs#fetch_job_by_id', :as => :job
