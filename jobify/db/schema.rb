@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20170410162737) do
     t.integer  "job_id"
     t.integer  "resume_id"
     t.integer  "company_id"
+    t.         "student"
     t.index ["company_id"], name: "index_comments_on_company_id"
     t.index ["job_id"], name: "index_comments_on_job_id"
     t.index ["resume_id"], name: "index_comments_on_resume_id"
@@ -32,9 +33,11 @@ ActiveRecord::Schema.define(version: 20170410162737) do
     t.string   "sector"
     t.string   "rating"
     t.string   "website"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "colour"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "commment_id"
+    t.index ["commment_id"], name: "index_companies_on_commment_id"
   end
 
   create_table "company_comment_upvotes", force: :cascade do |t|
@@ -83,6 +86,7 @@ ActiveRecord::Schema.define(version: 20170410162737) do
     t.string   "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.         "student"
     t.index ["job_id"], name: "index_job_comments_on_job_id"
   end
 
@@ -135,6 +139,8 @@ ActiveRecord::Schema.define(version: 20170410162737) do
     t.integer  "student_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "comment_id"
+    t.index ["comment_id"], name: "index_resumes_on_comment_id"
     t.index ["student_id"], name: "index_resumes_on_student_id"
   end
 
