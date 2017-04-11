@@ -8,28 +8,29 @@ Our project for Database I (CSI2132)
 
 Installation
 ---
-- Clone the repo
 ```bash
+# Clone the repo
+
 git clone git@github.com:Abdulwahaab710/CSI2132.git
-```
-- change directory
-```bash
+
+# change directory
+
 cd CSI2132/jobify
-```
-- Set the env to production
-```bash
+
+# Set the env to production
+
 RAILS_ENV=production
-```
-- Run bundle installer
-```bash
+
+# Run bundle installer
+
 bundle install
-```
-- Database migration
-```bash
+
+# Database migration
+
 rake db:migrate
-```
-- Run rails
-```
+
+# Run rails
+
 rails s
 ```
 
