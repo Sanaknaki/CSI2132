@@ -1,43 +1,47 @@
 
-# Jobify
-Our project for Database I (CSI2132)
-## To run the web app
-### requirements
-- Ruby == 2.4.0
-- Postgresql
+# JOBIFY
+Project for a Databases (CSI2132) course for students to rate their co-op jobs, built using Rails, JQuery, and PostgreSQL.
+## INFORMATION
 
-Installation
----
-```bash
-# Clone the repo
+```javascript
+// Contributors
+var ali = 'https://github.com/Sanaknaki';
+var karim = 'https://github.com/KarimChukfeh';
+var abdulwahab = 'https://github.com/Abdulwahaab710';
+var kritika = 'https://github.com/kritika59829';
 
-git clone git@github.com:Abdulwahaab710/CSI2132.git
+// Ruby version
+var rubyVersion = 2.4.0;
 
-# change directory
+// Need PostgreSQL
+var prostgreSQL = true;
+```
 
-cd CSI2132/jobify
+## INSTALLATION
+```javascript
+// Clone the repo
+var clone = 'git clone git@github.com:Abdulwahaab710/CSI2132.git';
 
-# Set the env to production
+// Change directory
+var dir = 'cd CSI2132/jobify';
 
-RAILS_ENV=production
+// Set the environment to production
+var env = 'RAILS_ENV=production';
 
-# Run bundle installer
+// Run bundle installer
+var install = 'bundle install';
 
-bundle install
+// Database migration
+var mig = 'rake db:migrate';
 
-# Database migration
-
-rake db:migrate
-
-# Run rails
-
-rails s
+// Run rails
+var run = 'rails s';
 ```
 
 ### Screenshots
 
-| Login page | Signup page |
-| ----------- | ---------- |
-| ![Alt text](https://raw.githubusercontent.com/Abdulwahaab710/CSI2132/master/screenshots/Login.png) |  ![Alt text](https://raw.githubusercontent.com/Abdulwahaab710/CSI2132/master/screenshots/signup.png) |
+![alt tag](https://raw.githubusercontent.com/Abdulwahaab710/CSI2132/master/screenshots/Login.png)
+<br><br>
+![alt tag](https://raw.githubusercontent.com/Abdulwahaab710/CSI2132/master/screenshots/signup.png)
 
 
