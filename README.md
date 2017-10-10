@@ -1,5 +1,6 @@
 
-# JOBIFY
+![alt tag](https://github.com/Sanaknaki/CSI2132/blob/master/jobify/app/assets/images/logo_b.png?raw=true)
+<br><br>
 Project for a Databases (CSI2132) course for students to rate their co-op jobs, built using Rails, JQuery, and PostgreSQL.
 ## INFORMATION
 
