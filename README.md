@@ -11,7 +11,7 @@ var abdulwahab = 'https://github.com/Abdulwahaab710';
 var kritika = 'https://github.com/kritika59829';
 
 // Ruby version
-var rubyVersion = 2.4.0;
+var rubyVersion = 2.4;
 
 // Need PostgreSQL
 var prostgreSQL = true;
